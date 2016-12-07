@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="fr.inria.diverse.sample.petrinet.XPetrinet" xdsmlFilePath="/fr.inria.diverse.sample.petrinet/bin/fr/inria/diverse/sample/petrinet/petrinet.melange" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated PetrinetV2MT -->
+    <package class="fr.inria.diverse.sample.petrinet.petrinetv2mt.petrinet.PetrinetPackage" genModel="model-gen/PetrinetV2MT.genmodel" uri="http://fr.inria.diverse.sample.petrinet.petrinetv2mt/petrinet/" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated PetrinetMT -->
+    <package class="fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PetrinetPackage" genModel="model-gen/PetrinetMT.genmodel" uri="http://fr.inria.diverse.sample.petrinet.petrinetmt/petrinet/" />
+  </extension>
+  <extension point="fr.inria.diverse.melange.modeltype">
+    <modeltype id="fr.inria.diverse.sample.petrinet.PetrinetMT" uri="http://fr.inria.diverse.sample.petrinet.petrinetmt/" />
+  </extension>
+  <extension point="fr.inria.diverse.melange.language">
+    <language aspects="Transition:fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspect;Net:fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect;Place:fr.inria.diverse.sample.petrinet.xpetrinet.aspects.PlaceAspect" entryPoints="fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect.run(fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net)" exactType="fr.inria.diverse.sample.petrinet.PetrinetMT" id="fr.inria.diverse.sample.petrinet.XPetrinet" uri="http://fr.inria.diverse.sample.petrinet.xpetrinet/petrinet/">
+      <adapter class="fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.XPetrinetAdapter" modeltypeId="fr.inria.diverse.sample.petrinet.PetrinetMT" />
+    </language>
+  </extension>
+</plugin>

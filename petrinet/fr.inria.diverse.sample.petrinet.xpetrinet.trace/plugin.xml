@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+-->
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated petrinetTrace -->
+      <package
+            uri="petrinetTrace"
+            class="petrinetTrace.PetrinetTracePackage"
+            genModel="model/petrinetTrace.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated petrinetTrace -->
+      <package
+            uri="petrinetTrace_Steps"
+            class="petrinetTrace.Steps.StepsPackage"
+            genModel="model/petrinetTrace.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated petrinetTrace -->
+      <package
+            uri="petrinetTrace_States"
+            class="petrinetTrace.States.StatesPackage"
+            genModel="model/petrinetTrace.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated petrinetTrace -->
+      <package
+            uri="petrinetTrace_petrinet"
+            class="petrinetTrace.States.petrinet.PetrinetPackage"
+            genModel="model/petrinetTrace.genmodel"/>
+   </extension>
+  <extension point="org.gemoc.gemoc_language_workbench.engine_addon">
+    <Addon Class="fr.inria.diverse.sample.petrinet.xpetrinet.trace.tracemanager.PetrinetTraceEngineAddon" Default="false" id="fr.inria.diverse.sample.petrinet.xpetrinet.trace" Name="petrinet MultiDimensional Trace" ShortDescription="MultiDimensional Trace support dedicated to petrinet language" openViewIds="org.gemoc.sequential_addons.multidimensional.timeline.views.timeline.MultidimensionalTimeLineView" AddonGroupId="Sequential.AddonGroup" />
+  </extension>
+</plugin>

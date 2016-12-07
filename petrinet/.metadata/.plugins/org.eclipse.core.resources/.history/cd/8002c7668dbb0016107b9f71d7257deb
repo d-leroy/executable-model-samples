@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.inria.diverse.sample.petrinet.xpetrinet
+Bundle-SymbolicName: fr.inria.diverse.sample.petrinet.xpetrinet;singleton:=true
+Bundle-Version: 0.1.0
+Require-Bundle: org.eclipse.emf.ecore,
+  fr.inria.diverse.k3.al.annotationprocessor.plugin,
+  fr.inria.diverse.melange,
+  org.eclipse.xtext.xbase.lib
+Export-Package: fr.inria.diverse.sample.petrinet.xpetrinet.aspects
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+

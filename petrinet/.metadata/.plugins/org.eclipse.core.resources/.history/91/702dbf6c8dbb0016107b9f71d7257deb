@@ -1,0 +1,101 @@
+package fr.inria.diverse.sample.petrinet.xpetrinet.aspects;
+
+import com.google.common.base.Objects;
+import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
+import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel;
+import fr.inria.diverse.k3.al.annotationprocessor.Main;
+import fr.inria.diverse.k3.al.annotationprocessor.Step;
+import fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspectNetAspectProperties;
+import fr.inria.diverse.sample.petrinet.xpetrinet.aspects.PlaceAspect;
+import fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspect;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IntegerRange;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetFactory;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Place;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Token;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Transition;
+
+@Aspect(className = Net.class)
+@SuppressWarnings("all")
+public class NetAspect {
+  @InitializeModel
+  @Step
+  public static void initializeModel(final Net _self, final EList<String> args) {
+    final fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspectNetAspectProperties _self_ = fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspectNetAspectContext.getSelf(_self);
+    fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
+    	@Override
+    	public void execute() {
+    		_privk3_initializeModel(_self_, _self,args);
+    	}
+    };
+    fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager stepManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry.getInstance().findStepManager(_self);
+    if (stepManager != null) {
+    	stepManager.executeStep(_self,command,"Net","initializeModel");
+    } else {
+    	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry.getInstance().findEventManager(_self);
+    	if (eventManager != null) {
+    		eventManager.manageEvents();
+    	}
+    	command.execute();
+    }
+    ;;
+  }
+  
+  /**
+   * Transformation rule that runs the Petri net.
+   */
+  @Main
+  @Step
+  public static void run(final Net _self) {
+    final fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspectNetAspectProperties _self_ = fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspectNetAspectContext.getSelf(_self);
+    fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
+    	@Override
+    	public void execute() {
+    		_privk3_run(_self_, _self);
+    	}
+    };
+    fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager stepManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry.getInstance().findStepManager(_self);
+    if (stepManager != null) {
+    	stepManager.executeStep(_self,command,"Net","run");
+    } else {
+    	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry.getInstance().findEventManager(_self);
+    	if (eventManager != null) {
+    		eventManager.manageEvents();
+    	}
+    	command.execute();
+    }
+    ;;
+  }
+  
+  protected static void _privk3_initializeModel(final NetAspectNetAspectProperties _self_, final Net _self, final EList<String> args) {
+    EList<Place> _places = _self.getPlaces();
+    for (final Place place : _places) {
+      int _initialTokens = place.getInitialTokens();
+      IntegerRange _upTo = new IntegerRange(1, _initialTokens);
+      for (final Integer x : _upTo) {
+        EList<Token> _kens = PlaceAspect.tokens(place);
+        Token _createToken = PetrinetFactory.eINSTANCE.createToken();
+        _kens.add(_createToken);
+      }
+    }
+  }
+  
+  protected static void _privk3_run(final NetAspectNetAspectProperties _self_, final Net _self) {
+    while (true) {
+      {
+        EList<Transition> _transitions = _self.getTransitions();
+        final Function1<Transition, Boolean> _function = (Transition t) -> {
+          return Boolean.valueOf(TransitionAspect.isEnabled(t));
+        };
+        final Transition enabledTransition = IterableExtensions.<Transition>findFirst(_transitions, _function);
+        boolean _notEquals = (!Objects.equal(enabledTransition, null));
+        if (_notEquals) {
+          TransitionAspect.fire(enabledTransition);
+        }
+      }
+    }
+  }
+}
