@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.gemoc.execution.sequential.javaengine.ui.launcher">
+<intAttribute key="GEMOC_ANIMATE_DELAY" value="0"/>
+<booleanAttribute key="GEMOC_LAUNCH_BREAK_START" value="true"/>
+<stringAttribute key="GEMOC_LAUNCH_INITIALIZATION_ARGUMENTS" value=""/>
+<stringAttribute key="GEMOC_LAUNCH_INITIALIZATION_METHOD" value="fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect.initializeModel"/>
+<stringAttribute key="GEMOC_LAUNCH_SELECTED_LANGUAGE" value="fr.inria.diverse.sample.petrinet.XPetrinet"/>
+<stringAttribute key="LAUNCH_METHOD_ENTRY_POINT" value="public static void fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect.run(fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net)"/>
+<stringAttribute key="LAUNCH_MODEL_ENTRY_POINT" value="/"/>
+<stringAttribute key="Resource" value="/fr.inria.diverse.sample.petrinet.examples/models/net1.xpn"/>
+<stringAttribute key="airdResource" value=""/>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+</listAttribute>
+<booleanAttribute key="petrinet MultiDimensional Trace" value="true"/>
+</launchConfiguration>

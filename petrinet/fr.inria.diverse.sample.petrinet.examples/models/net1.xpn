@@ -1,0 +1,12 @@
+Net
+	places
+		place "p1" initialTokens 1,
+		place "p2" initialTokens 1,
+		place "p3",
+		place "p4",
+		place "p5"
+	transitions
+		transition "t1" from p1 to p3,
+		transition "t2" from p2 to p3,
+		transition "t3" from p3 to p4,
+		transition "t4" from p3 to p5
