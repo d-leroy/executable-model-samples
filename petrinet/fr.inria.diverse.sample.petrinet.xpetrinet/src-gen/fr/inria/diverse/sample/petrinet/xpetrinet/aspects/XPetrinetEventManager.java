@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent;
 import fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager;
@@ -27,6 +28,9 @@ public class XPetrinetEventManager implements IEventManager {
 	
 	@Override
 	public boolean canSendEvent(Object event) {
+		if (event instanceof NetStopEvent) {
+			return true;
+		} else
 		if (event instanceof PlaceAddTokenEvent) {
 			return canSendPlaceAddTokenEvent((PlaceAddTokenEvent) event);
 		} else
@@ -39,6 +43,7 @@ public class XPetrinetEventManager implements IEventManager {
 	@Override
 	public Set<EClass> getEventClasses() {
 		final Set<EClass> eventClasses = new HashSet<>();
+		eventClasses.add(PetrinetPackage.eINSTANCE.getNetStopEvent());
 		eventClasses.add(PetrinetPackage.eINSTANCE.getPlaceAddTokenEvent());
 		eventClasses.add(PetrinetPackage.eINSTANCE.getPlaceRemoveTokenEvent());
 		return eventClasses;
@@ -58,12 +63,19 @@ public class XPetrinetEventManager implements IEventManager {
 	}
 	
 	private void dispatchEvent(EObject event) {
+		if (event instanceof NetStopEvent) {
+			handleNetStopEvent((NetStopEvent) event);
+		} else
 		if (event instanceof PlaceAddTokenEvent) {
 			handlePlaceAddTokenEvent((PlaceAddTokenEvent) event);
 		} else
 		if (event instanceof PlaceRemoveTokenEvent) {
 			handlePlaceRemoveTokenEvent((PlaceRemoveTokenEvent) event);
 		}
+	}
+	
+	private void handleNetStopEvent(NetStopEvent event) {
+		NetAspect.stop(event.getNet());
 	}
 	
 	private void handlePlaceAddTokenEvent(PlaceAddTokenEvent event) {

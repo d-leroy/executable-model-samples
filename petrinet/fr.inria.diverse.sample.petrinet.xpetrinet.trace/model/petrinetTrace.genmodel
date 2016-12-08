@@ -6,10 +6,13 @@
     <genClasses>
       <ecoreClass href="petrinetTrace.ecore#//SpecificTrace"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Net_FireEnabledTransition_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Net_InitializeModel_Sequence"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Net_Run_Sequence"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Net_Stop_Sequence"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Place_AddToken_Sequence"/>
@@ -33,6 +36,18 @@
     <nestedGenPackages prefix="Steps" disposableProviderFactory="true">
       <ecorePackage href="petrinetTrace.ecore#//Steps"/>
       <genClasses>
+        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_FireEnabledTransition"/>
+        <genOperations>
+          <ecoreOperation href="petrinetTrace.ecore#//Steps/Petrinet_Net_FireEnabledTransition/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_FireEnabledTransition_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_FireEnabledTransition_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
         <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_InitializeModel"/>
         <genOperations>
           <ecoreOperation href="petrinetTrace.ecore#//Steps/Petrinet_Net_InitializeModel/getCaller"/>
@@ -45,16 +60,16 @@
         <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_InitializeModel_ImplicitStep"/>
       </genClasses>
       <genClasses>
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_Run"/>
+        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_Stop"/>
         <genOperations>
-          <ecoreOperation href="petrinetTrace.ecore#//Steps/Petrinet_Net_Run/getCaller"/>
+          <ecoreOperation href="petrinetTrace.ecore#//Steps/Petrinet_Net_Stop/getCaller"/>
         </genOperations>
       </genClasses>
       <genClasses image="false">
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_Run_AbstractSubStep"/>
+        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_Stop_AbstractSubStep"/>
       </genClasses>
       <genClasses>
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_Run_ImplicitStep"/>
+        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_Stop_ImplicitStep"/>
       </genClasses>
       <genClasses>
         <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Place_AddToken"/>

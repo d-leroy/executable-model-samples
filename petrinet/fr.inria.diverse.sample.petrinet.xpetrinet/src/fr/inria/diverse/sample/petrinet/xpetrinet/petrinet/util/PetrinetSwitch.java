@@ -90,6 +90,12 @@ public class PetrinetSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PetrinetPackage.NET_STOP_EVENT: {
+				NetStopEvent netStopEvent = (NetStopEvent)theEObject;
+				T result = caseNetStopEvent(netStopEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case PetrinetPackage.PLACE_ADD_TOKEN_EVENT: {
 				PlaceAddTokenEvent placeAddTokenEvent = (PlaceAddTokenEvent)theEObject;
 				T result = casePlaceAddTokenEvent(placeAddTokenEvent);
@@ -163,6 +169,21 @@ public class PetrinetSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToken(Token object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Net Stop Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Net Stop Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNetStopEvent(NetStopEvent object) {
 		return null;
 	}
 

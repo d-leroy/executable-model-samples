@@ -28,7 +28,7 @@ public class PlaceAspect {
 		manager.executeStep(_self, command, "Place", "addToken");
 	} else {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager(_self);
+				.getInstance().findEventManager();
 		if (eventManager != null) {
 			eventManager.manageEvents();
 		}
@@ -63,7 +63,7 @@ public class PlaceAspect {
 		manager.executeStep(_self, command, "Place", "removeToken");
 	} else {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager(_self);
+				.getInstance().findEventManager();
 		if (eventManager != null) {
 			eventManager.manageEvents();
 		}

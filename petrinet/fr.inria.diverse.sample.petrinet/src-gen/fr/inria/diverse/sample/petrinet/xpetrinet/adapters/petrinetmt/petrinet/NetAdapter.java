@@ -37,6 +37,11 @@ public class NetAdapter extends EObjectAdapter<Net> implements fr.inria.diverse.
   }
   
   @Override
+  public void fireEnabledTransition() {
+    fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect.fireEnabledTransition(adaptee);
+  }
+  
+  @Override
   public void initializeModel(final org.eclipse.emf.common.util.EList<java.lang.String> args) {
     fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect.initializeModel(adaptee, args
     );
@@ -45,6 +50,11 @@ public class NetAdapter extends EObjectAdapter<Net> implements fr.inria.diverse.
   @Override
   public void run() {
     fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect.run(adaptee);
+  }
+  
+  @Override
+  public void stop() {
+    fr.inria.diverse.sample.petrinet.xpetrinet.aspects.NetAspect.stop(adaptee);
   }
   
   @Override

@@ -84,6 +84,10 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 				return createTokenAdapter();
 			}
 			@Override
+			public Adapter caseNetStopEvent(NetStopEvent object) {
+				return createNetStopEventAdapter();
+			}
+			@Override
 			public Adapter casePlaceAddTokenEvent(PlaceAddTokenEvent object) {
 				return createPlaceAddTokenEventAdapter();
 			}
@@ -164,6 +168,20 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTokenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent <em>Net Stop Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent
+	 * @generated
+	 */
+	public Adapter createNetStopEventAdapter() {
 		return null;
 	}
 

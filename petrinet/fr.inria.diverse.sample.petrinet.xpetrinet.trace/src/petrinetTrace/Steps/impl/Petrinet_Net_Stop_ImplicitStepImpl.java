@@ -15,24 +15,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import petrinetTrace.States.State;
 import petrinetTrace.States.StatesPackage;
 
-import petrinetTrace.Steps.Petrinet_Net_Run_ImplicitStep;
+import petrinetTrace.Steps.Petrinet_Net_Stop_ImplicitStep;
 import petrinetTrace.Steps.StepsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Petrinet Net Run Implicit Step</b></em>'.
+ * An implementation of the model object '<em><b>Petrinet Net Stop Implicit Step</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Net_Run_ImplicitStepImpl#getEndingState <em>Ending State</em>}</li>
- *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Net_Run_ImplicitStepImpl#getStartingState <em>Starting State</em>}</li>
+ *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Net_Stop_ImplicitStepImpl#getEndingState <em>Ending State</em>}</li>
+ *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Net_Stop_ImplicitStepImpl#getStartingState <em>Starting State</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petrinet_Net_Run_ImplicitStep {
+public class Petrinet_Net_Stop_ImplicitStepImpl extends StepImpl implements Petrinet_Net_Stop_ImplicitStep {
 	/**
 	 * The cached value of the '{@link #getEndingState() <em>Ending State</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -58,7 +58,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Petrinet_Net_Run_ImplicitStepImpl() {
+	protected Petrinet_Net_Stop_ImplicitStepImpl() {
 		super();
 	}
 
@@ -69,7 +69,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StepsPackage.Literals.PETRINET_NET_RUN_IMPLICIT_STEP;
+		return StepsPackage.Literals.PETRINET_NET_STOP_IMPLICIT_STEP;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 			endingState = (State)eResolveProxy(oldEndingState);
 			if (endingState != oldEndingState) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE, oldEndingState, endingState));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE, oldEndingState, endingState));
 			}
 		}
 		return endingState;
@@ -107,7 +107,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 		State oldEndingState = endingState;
 		endingState = newEndingState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE, oldEndingState, newEndingState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE, oldEndingState, newEndingState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -129,7 +129,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE, newEndingState, newEndingState));
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE, newEndingState, newEndingState));
 	}
 
 	/**
@@ -143,7 +143,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 			startingState = (State)eResolveProxy(oldStartingState);
 			if (startingState != oldStartingState) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE, oldStartingState, startingState));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE, oldStartingState, startingState));
 			}
 		}
 		return startingState;
@@ -167,7 +167,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 		State oldStartingState = startingState;
 		startingState = newStartingState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE, oldStartingState, newStartingState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE, oldStartingState, newStartingState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -189,7 +189,7 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE, newStartingState, newStartingState));
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE, newStartingState, newStartingState));
 	}
 
 	/**
@@ -200,11 +200,11 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE:
 				if (endingState != null)
 					msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 				return basicSetEndingState((State)otherEnd, msgs);
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE:
 				if (startingState != null)
 					msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 				return basicSetStartingState((State)otherEnd, msgs);
@@ -220,9 +220,9 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE:
 				return basicSetEndingState(null, msgs);
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE:
 				return basicSetStartingState(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -236,10 +236,10 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE:
 				if (resolve) return getEndingState();
 				return basicGetEndingState();
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE:
 				if (resolve) return getStartingState();
 				return basicGetStartingState();
 		}
@@ -254,10 +254,10 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE:
 				setEndingState((State)newValue);
 				return;
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE:
 				setStartingState((State)newValue);
 				return;
 		}
@@ -272,10 +272,10 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE:
 				setEndingState((State)null);
 				return;
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE:
 				setStartingState((State)null);
 				return;
 		}
@@ -290,12 +290,12 @@ public class Petrinet_Net_Run_ImplicitStepImpl extends StepImpl implements Petri
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__ENDING_STATE:
 				return endingState != null;
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP__STARTING_STATE:
 				return startingState != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //Petrinet_Net_Run_ImplicitStepImpl
+} //Petrinet_Net_Stop_ImplicitStepImpl

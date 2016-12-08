@@ -72,4 +72,20 @@ public interface Net extends EObject {
 	 */
 	void run();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void fireEnabledTransition();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void stop();
+
 } // Net

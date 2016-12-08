@@ -2,6 +2,8 @@
  */
 package petrinetTrace.Steps.impl;
 
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net;
+
 import fr.inria.diverse.trace.commons.model.trace.BigStep;
 import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
 import fr.inria.diverse.trace.commons.model.trace.TracePackage;
@@ -26,32 +28,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import petrinetTrace.States.State;
 import petrinetTrace.States.StatesPackage;
 
-import petrinetTrace.States.petrinet.TracedPlace;
-
-import petrinetTrace.Steps.Petrinet_Net_InitializeModel_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Net_Stop_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Transition_Fire_AbstractSubStep;
+import petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition;
+import petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition_AbstractSubStep;
 import petrinetTrace.Steps.StepsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Petrinet Place Remove Token</b></em>'.
+ * An implementation of the model object '<em><b>Petrinet Net Fire Enabled Transition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Place_RemoveTokenImpl#getEndingState <em>Ending State</em>}</li>
- *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Place_RemoveTokenImpl#getStartingState <em>Starting State</em>}</li>
- *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Place_RemoveTokenImpl#getSubSteps <em>Sub Steps</em>}</li>
+ *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Net_FireEnabledTransitionImpl#getEndingState <em>Ending State</em>}</li>
+ *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Net_FireEnabledTransitionImpl#getStartingState <em>Starting State</em>}</li>
+ *   <li>{@link petrinetTrace.Steps.impl.Petrinet_Net_FireEnabledTransitionImpl#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet_Place_RemoveToken {
+public class Petrinet_Net_FireEnabledTransitionImpl extends StepImpl implements Petrinet_Net_FireEnabledTransition {
 	/**
 	 * The cached value of the '{@link #getEndingState() <em>Ending State</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -80,14 +76,14 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Petrinet_Place_RemoveToken_AbstractSubStep> subSteps;
+	protected EList<Petrinet_Net_FireEnabledTransition_AbstractSubStep> subSteps;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Petrinet_Place_RemoveTokenImpl() {
+	protected Petrinet_Net_FireEnabledTransitionImpl() {
 		super();
 	}
 
@@ -98,7 +94,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StepsPackage.Literals.PETRINET_PLACE_REMOVE_TOKEN;
+		return StepsPackage.Literals.PETRINET_NET_FIRE_ENABLED_TRANSITION;
 	}
 
 	/**
@@ -112,7 +108,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 			endingState = (State)eResolveProxy(oldEndingState);
 			if (endingState != oldEndingState) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE, oldEndingState, endingState));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE, oldEndingState, endingState));
 			}
 		}
 		return endingState;
@@ -136,7 +132,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 		State oldEndingState = endingState;
 		endingState = newEndingState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE, oldEndingState, newEndingState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE, oldEndingState, newEndingState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -158,7 +154,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE, newEndingState, newEndingState));
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE, newEndingState, newEndingState));
 	}
 
 	/**
@@ -172,7 +168,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 			startingState = (State)eResolveProxy(oldStartingState);
 			if (startingState != oldStartingState) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE, oldStartingState, startingState));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE, oldStartingState, startingState));
 			}
 		}
 		return startingState;
@@ -196,7 +192,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 		State oldStartingState = startingState;
 		startingState = newStartingState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE, oldStartingState, newStartingState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE, oldStartingState, newStartingState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -218,7 +214,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE, newStartingState, newStartingState));
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE, newStartingState, newStartingState));
 	}
 
 	/**
@@ -226,9 +222,9 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Petrinet_Place_RemoveToken_AbstractSubStep> getSubSteps() {
+	public EList<Petrinet_Net_FireEnabledTransition_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
-			subSteps = new EObjectContainmentEList<Petrinet_Place_RemoveToken_AbstractSubStep>(Petrinet_Place_RemoveToken_AbstractSubStep.class, this, StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS);
+			subSteps = new EObjectContainmentEList<Petrinet_Net_FireEnabledTransition_AbstractSubStep>(Petrinet_Net_FireEnabledTransition_AbstractSubStep.class, this, StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS);
 		}
 		return subSteps;
 	}
@@ -238,8 +234,8 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedPlace getCaller() {
-		return (petrinetTrace.States.petrinet.TracedPlace) this.getMseoccurrence().getMse().getCaller();
+	public Net getCaller() {
+		return (fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net) this.getMseoccurrence().getMse().getCaller();
 	}
 
 	/**
@@ -250,11 +246,11 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE:
 				if (endingState != null)
 					msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 				return basicSetEndingState((State)otherEnd, msgs);
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE:
 				if (startingState != null)
 					msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 				return basicSetStartingState((State)otherEnd, msgs);
@@ -270,11 +266,11 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE:
 				return basicSetEndingState(null, msgs);
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE:
 				return basicSetStartingState(null, msgs);
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS:
 				return ((InternalEList<?>)getSubSteps()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -288,13 +284,13 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE:
 				if (resolve) return getEndingState();
 				return basicGetEndingState();
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE:
 				if (resolve) return getStartingState();
 				return basicGetStartingState();
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS:
 				return getSubSteps();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -309,15 +305,15 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE:
 				setEndingState((State)newValue);
 				return;
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE:
 				setStartingState((State)newValue);
 				return;
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS:
 				getSubSteps().clear();
-				getSubSteps().addAll((Collection<? extends Petrinet_Place_RemoveToken_AbstractSubStep>)newValue);
+				getSubSteps().addAll((Collection<? extends Petrinet_Net_FireEnabledTransition_AbstractSubStep>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -331,13 +327,13 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE:
 				setEndingState((State)null);
 				return;
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE:
 				setStartingState((State)null);
 				return;
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS:
 				getSubSteps().clear();
 				return;
 		}
@@ -352,11 +348,11 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__ENDING_STATE:
 				return endingState != null;
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__STARTING_STATE:
 				return startingState != null;
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS:
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS:
 				return subSteps != null && !subSteps.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -369,38 +365,13 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Petrinet_Place_AddToken_AbstractSubStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == BigStep.class) {
 			switch (derivedFeatureID) {
-				case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS: return TracePackage.BIG_STEP__SUB_STEPS;
+				case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS: return TracePackage.BIG_STEP__SUB_STEPS;
 				default: return -1;
 			}
 		}
 		if (baseClass == SequentialStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Place_RemoveToken_AbstractSubStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Net_Stop_AbstractSubStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Transition_Fire_AbstractSubStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Net_InitializeModel_AbstractSubStep.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -415,14 +386,9 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Petrinet_Place_AddToken_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == BigStep.class) {
 			switch (baseFeatureID) {
-				case TracePackage.BIG_STEP__SUB_STEPS: return StepsPackage.PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS;
+				case TracePackage.BIG_STEP__SUB_STEPS: return StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION__SUB_STEPS;
 				default: return -1;
 			}
 		}
@@ -431,27 +397,7 @@ public class Petrinet_Place_RemoveTokenImpl extends StepImpl implements Petrinet
 				default: return -1;
 			}
 		}
-		if (baseClass == Petrinet_Place_RemoveToken_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Net_Stop_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Transition_Fire_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Net_InitializeModel_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-} //Petrinet_Place_RemoveTokenImpl
+} //Petrinet_Net_FireEnabledTransitionImpl

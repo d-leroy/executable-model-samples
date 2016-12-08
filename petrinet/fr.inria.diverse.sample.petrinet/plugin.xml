@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
   <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
-    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="fr.inria.diverse.sample.petrinet.XPetrinet" xdsmlFilePath="/fr.inria.diverse.sample.petrinet/bin/fr/inria/diverse/sample/petrinet/petrinet.melange" />
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="fr.inria.diverse.sample.petrinet.XPetrinet" xdsmlFilePath="/fr.inria.diverse.sample.petrinet/src/fr/inria/diverse/sample/petrinet/petrinet.melange" />
   </extension>
   <extension point="org.eclipse.emf.ecore.generated_package">
     <!-- @generated PetrinetV2MT -->

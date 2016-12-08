@@ -1,6 +1,7 @@
 package fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet;
 
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.Net;
+import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PetrinetFactory;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PetrinetPackage;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.Place;
@@ -36,6 +37,11 @@ public class PetrinetFactoryAdapter extends EFactoryImpl implements PetrinetFact
   @Override
   public Token createToken() {
     return adaptersFactory.createTokenAdapter(petrinetAdaptee.createToken(), null);
+  }
+  
+  @Override
+  public NetStopEvent createNetStopEvent() {
+    return adaptersFactory.createNetStopEventAdapter(petrinetAdaptee.createNetStopEvent(), null);
   }
   
   @Override

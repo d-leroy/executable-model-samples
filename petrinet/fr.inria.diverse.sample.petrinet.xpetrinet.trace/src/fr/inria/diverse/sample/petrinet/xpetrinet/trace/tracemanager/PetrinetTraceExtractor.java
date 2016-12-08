@@ -542,8 +542,9 @@ public class PetrinetTraceExtractor implements ITraceExtractor {
 		final boolean b = state.getStartedSteps().size() == 1;
 		if (b) {
 			petrinetTrace.Steps.SpecificStep s = state.getStartedSteps().get(0);
-			return !(s instanceof petrinetTrace.Steps.Petrinet_Net_InitializeModel_ImplicitStep
-					|| s instanceof petrinetTrace.Steps.Petrinet_Net_Run_ImplicitStep
+			return !(s instanceof petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition_ImplicitStep
+					|| s instanceof petrinetTrace.Steps.Petrinet_Net_InitializeModel_ImplicitStep
+					|| s instanceof petrinetTrace.Steps.Petrinet_Net_Stop_ImplicitStep
 					|| s instanceof petrinetTrace.Steps.Petrinet_Place_AddToken_ImplicitStep
 					|| s instanceof petrinetTrace.Steps.Petrinet_Place_RemoveToken_ImplicitStep
 					|| s instanceof petrinetTrace.Steps.Petrinet_Transition_Fire_ImplicitStep);

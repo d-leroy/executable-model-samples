@@ -42,7 +42,7 @@ public class PetrinetTraceConstructor implements ITraceConstructor {
 			Set<Resource> allResources = getAllExecutedModelResources();
 			lastState = petrinetTrace.States.StatesFactory.eINSTANCE.createState();
 			for (Resource r : allResources) {
-				for (TreeIterator<EObject> i = r.getAllContents(); i.hasNext();) {
+				for (TreeIterator< EObject>i = r.getAllContents(); i.hasNext();) {
 					EObject o = i.next();
 
 					if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Token) {
@@ -228,12 +228,16 @@ public class PetrinetTraceConstructor implements ITraceConstructor {
 			}
 
 			// Adding step in its dedicated sequence/dimension
-			if (step_cast instanceof petrinetTrace.Steps.Petrinet_Net_InitializeModel) {
+			if (step_cast instanceof petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition) {
+				petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition petrinet_Net_FireEnabledTransitionInstance = (petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition) step_cast;
+				traceRoot.getPetrinet_Net_FireEnabledTransition_Sequence()
+						.add(petrinet_Net_FireEnabledTransitionInstance);
+			} else if (step_cast instanceof petrinetTrace.Steps.Petrinet_Net_InitializeModel) {
 				petrinetTrace.Steps.Petrinet_Net_InitializeModel petrinet_Net_InitializeModelInstance = (petrinetTrace.Steps.Petrinet_Net_InitializeModel) step_cast;
 				traceRoot.getPetrinet_Net_InitializeModel_Sequence().add(petrinet_Net_InitializeModelInstance);
-			} else if (step_cast instanceof petrinetTrace.Steps.Petrinet_Net_Run) {
-				petrinetTrace.Steps.Petrinet_Net_Run petrinet_Net_RunInstance = (petrinetTrace.Steps.Petrinet_Net_Run) step_cast;
-				traceRoot.getPetrinet_Net_Run_Sequence().add(petrinet_Net_RunInstance);
+			} else if (step_cast instanceof petrinetTrace.Steps.Petrinet_Net_Stop) {
+				petrinetTrace.Steps.Petrinet_Net_Stop petrinet_Net_StopInstance = (petrinetTrace.Steps.Petrinet_Net_Stop) step_cast;
+				traceRoot.getPetrinet_Net_Stop_Sequence().add(petrinet_Net_StopInstance);
 			} else if (step_cast instanceof petrinetTrace.Steps.Petrinet_Place_AddToken) {
 				petrinetTrace.Steps.Petrinet_Place_AddToken petrinet_Place_AddTokenInstance = (petrinetTrace.Steps.Petrinet_Place_AddToken) step_cast;
 				traceRoot.getPetrinet_Place_AddToken_Sequence().add(petrinet_Place_AddTokenInstance);
@@ -253,10 +257,13 @@ public class PetrinetTraceConstructor implements ITraceConstructor {
 			petrinetTrace.States.State endingState) {
 
 		petrinetTrace.Steps.SpecificStep implicitStep = null;
-		if (currentStep instanceof petrinetTrace.Steps.Petrinet_Net_InitializeModel) {
+		if (currentStep instanceof petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition) {
+			implicitStep = petrinetTrace.Steps.StepsFactory.eINSTANCE
+					.createPetrinet_Net_FireEnabledTransition_ImplicitStep();
+		} else if (currentStep instanceof petrinetTrace.Steps.Petrinet_Net_InitializeModel) {
 			implicitStep = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_InitializeModel_ImplicitStep();
-		} else if (currentStep instanceof petrinetTrace.Steps.Petrinet_Net_Run) {
-			implicitStep = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_Run_ImplicitStep();
+		} else if (currentStep instanceof petrinetTrace.Steps.Petrinet_Net_Stop) {
+			implicitStep = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_Stop_ImplicitStep();
 		} else if (currentStep instanceof petrinetTrace.Steps.Petrinet_Place_AddToken) {
 			implicitStep = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Place_AddToken_ImplicitStep();
 		} else if (currentStep instanceof petrinetTrace.Steps.Petrinet_Place_RemoveToken) {

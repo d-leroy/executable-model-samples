@@ -29,7 +29,7 @@ import petrinetTrace.States.StatesPackage;
 import petrinetTrace.States.petrinet.TracedPlace;
 
 import petrinetTrace.Steps.Petrinet_Net_InitializeModel_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Net_Run_AbstractSubStep;
+import petrinetTrace.Steps.Petrinet_Net_Stop_AbstractSubStep;
 import petrinetTrace.Steps.Petrinet_Place_AddToken;
 import petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep;
 import petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep;
@@ -390,7 +390,7 @@ public class Petrinet_Place_AddTokenImpl extends StepImpl implements Petrinet_Pl
 				default: return -1;
 			}
 		}
-		if (baseClass == Petrinet_Net_Run_AbstractSubStep.class) {
+		if (baseClass == Petrinet_Net_Stop_AbstractSubStep.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -436,7 +436,7 @@ public class Petrinet_Place_AddTokenImpl extends StepImpl implements Petrinet_Pl
 				default: return -1;
 			}
 		}
-		if (baseClass == Petrinet_Net_Run_AbstractSubStep.class) {
+		if (baseClass == Petrinet_Net_Stop_AbstractSubStep.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}

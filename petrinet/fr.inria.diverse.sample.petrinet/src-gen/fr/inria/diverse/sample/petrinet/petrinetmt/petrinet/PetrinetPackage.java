@@ -204,6 +204,34 @@ public interface PetrinetPackage extends EPackage {
 	int TOKEN_FEATURE_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.NetStopEventImpl <em>Net Stop Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.NetStopEventImpl
+	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.PetrinetPackageImpl#getNetStopEvent()
+	 * @generated
+	 */
+	int NET_STOP_EVENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Net</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NET_STOP_EVENT__NET = 0;
+
+	/**
+	 * The number of structural features of the '<em>Net Stop Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NET_STOP_EVENT_FEATURE_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.PlaceAddTokenEventImpl <em>Place Add Token Event</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -211,7 +239,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.PetrinetPackageImpl#getPlaceAddTokenEvent()
 	 * @generated
 	 */
-	int PLACE_ADD_TOKEN_EVENT = 4;
+	int PLACE_ADD_TOKEN_EVENT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Place</b></em>' reference.
@@ -240,7 +268,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.PetrinetPackageImpl#getPlaceRemoveTokenEvent()
 	 * @generated
 	 */
-	int PLACE_REMOVE_TOKEN_EVENT = 5;
+	int PLACE_REMOVE_TOKEN_EVENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Place</b></em>' reference.
@@ -388,6 +416,27 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getToken();
+
+	/**
+	 * Returns the meta object for class '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent <em>Net Stop Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Net Stop Event</em>'.
+	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent
+	 * @generated
+	 */
+	EClass getNetStopEvent();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent#getNet <em>Net</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Net</em>'.
+	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent#getNet()
+	 * @see #getNetStopEvent()
+	 * @generated
+	 */
+	EReference getNetStopEvent_Net();
 
 	/**
 	 * Returns the meta object for class '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceAddTokenEvent <em>Place Add Token Event</em>}'.
@@ -556,6 +605,24 @@ public interface PetrinetPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TOKEN = eINSTANCE.getToken();
+
+		/**
+		 * The meta object literal for the '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.NetStopEventImpl <em>Net Stop Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.NetStopEventImpl
+		 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.PetrinetPackageImpl#getNetStopEvent()
+		 * @generated
+		 */
+		EClass NET_STOP_EVENT = eINSTANCE.getNetStopEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>Net</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NET_STOP_EVENT__NET = eINSTANCE.getNetStopEvent_Net();
 
 		/**
 		 * The meta object literal for the '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.impl.PlaceAddTokenEventImpl <em>Place Add Token Event</em>}' class.

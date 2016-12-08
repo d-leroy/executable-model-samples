@@ -73,6 +73,18 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	protected StepsSwitch<Adapter> modelSwitch =
 		new StepsSwitch<Adapter>() {
 			@Override
+			public Adapter casePetrinet_Net_FireEnabledTransition(Petrinet_Net_FireEnabledTransition object) {
+				return createPetrinet_Net_FireEnabledTransitionAdapter();
+			}
+			@Override
+			public Adapter casePetrinet_Net_FireEnabledTransition_AbstractSubStep(Petrinet_Net_FireEnabledTransition_AbstractSubStep object) {
+				return createPetrinet_Net_FireEnabledTransition_AbstractSubStepAdapter();
+			}
+			@Override
+			public Adapter casePetrinet_Net_FireEnabledTransition_ImplicitStep(Petrinet_Net_FireEnabledTransition_ImplicitStep object) {
+				return createPetrinet_Net_FireEnabledTransition_ImplicitStepAdapter();
+			}
+			@Override
 			public Adapter casePetrinet_Net_InitializeModel(Petrinet_Net_InitializeModel object) {
 				return createPetrinet_Net_InitializeModelAdapter();
 			}
@@ -85,16 +97,16 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 				return createPetrinet_Net_InitializeModel_ImplicitStepAdapter();
 			}
 			@Override
-			public Adapter casePetrinet_Net_Run(Petrinet_Net_Run object) {
-				return createPetrinet_Net_RunAdapter();
+			public Adapter casePetrinet_Net_Stop(Petrinet_Net_Stop object) {
+				return createPetrinet_Net_StopAdapter();
 			}
 			@Override
-			public Adapter casePetrinet_Net_Run_AbstractSubStep(Petrinet_Net_Run_AbstractSubStep object) {
-				return createPetrinet_Net_Run_AbstractSubStepAdapter();
+			public Adapter casePetrinet_Net_Stop_AbstractSubStep(Petrinet_Net_Stop_AbstractSubStep object) {
+				return createPetrinet_Net_Stop_AbstractSubStepAdapter();
 			}
 			@Override
-			public Adapter casePetrinet_Net_Run_ImplicitStep(Petrinet_Net_Run_ImplicitStep object) {
-				return createPetrinet_Net_Run_ImplicitStepAdapter();
+			public Adapter casePetrinet_Net_Stop_ImplicitStep(Petrinet_Net_Stop_ImplicitStep object) {
+				return createPetrinet_Net_Stop_ImplicitStepAdapter();
 			}
 			@Override
 			public Adapter casePetrinet_Place_AddToken(Petrinet_Place_AddToken object) {
@@ -177,6 +189,48 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition <em>Petrinet Net Fire Enabled Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition
+	 * @generated
+	 */
+	public Adapter createPetrinet_Net_FireEnabledTransitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition_AbstractSubStep <em>Petrinet Net Fire Enabled Transition Abstract Sub Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition_AbstractSubStep
+	 * @generated
+	 */
+	public Adapter createPetrinet_Net_FireEnabledTransition_AbstractSubStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition_ImplicitStep <em>Petrinet Net Fire Enabled Transition Implicit Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition_ImplicitStep
+	 * @generated
+	 */
+	public Adapter createPetrinet_Net_FireEnabledTransition_ImplicitStepAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_InitializeModel <em>Petrinet Net Initialize Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -219,44 +273,44 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_Run <em>Petrinet Net Run</em>}'.
+	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_Stop <em>Petrinet Net Stop</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Net_Run
+	 * @see petrinetTrace.Steps.Petrinet_Net_Stop
 	 * @generated
 	 */
-	public Adapter createPetrinet_Net_RunAdapter() {
+	public Adapter createPetrinet_Net_StopAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_Run_AbstractSubStep <em>Petrinet Net Run Abstract Sub Step</em>}'.
+	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_Stop_AbstractSubStep <em>Petrinet Net Stop Abstract Sub Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Net_Run_AbstractSubStep
+	 * @see petrinetTrace.Steps.Petrinet_Net_Stop_AbstractSubStep
 	 * @generated
 	 */
-	public Adapter createPetrinet_Net_Run_AbstractSubStepAdapter() {
+	public Adapter createPetrinet_Net_Stop_AbstractSubStepAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_Run_ImplicitStep <em>Petrinet Net Run Implicit Step</em>}'.
+	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Net_Stop_ImplicitStep <em>Petrinet Net Stop Implicit Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Net_Run_ImplicitStep
+	 * @see petrinetTrace.Steps.Petrinet_Net_Stop_ImplicitStep
 	 * @generated
 	 */
-	public Adapter createPetrinet_Net_Run_ImplicitStepAdapter() {
+	public Adapter createPetrinet_Net_Stop_ImplicitStepAdapter() {
 		return null;
 	}
 

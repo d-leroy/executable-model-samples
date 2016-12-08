@@ -16,7 +16,7 @@ import petrinetTrace.States.petrinet.TracedPlace;
  * @model
  * @generated
  */
-public interface Petrinet_Place_AddToken extends SpecificStep, SequentialStep<Petrinet_Place_AddToken_AbstractSubStep>, Petrinet_Place_AddToken_AbstractSubStep, Petrinet_Place_RemoveToken_AbstractSubStep, Petrinet_Net_Run_AbstractSubStep, Petrinet_Transition_Fire_AbstractSubStep, Petrinet_Net_InitializeModel_AbstractSubStep {
+public interface Petrinet_Place_AddToken extends Petrinet_Net_FireEnabledTransition_AbstractSubStep, SpecificStep, SequentialStep<Petrinet_Place_AddToken_AbstractSubStep>, Petrinet_Place_AddToken_AbstractSubStep, Petrinet_Place_RemoveToken_AbstractSubStep, Petrinet_Net_Stop_AbstractSubStep, Petrinet_Transition_Fire_AbstractSubStep, Petrinet_Net_InitializeModel_AbstractSubStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -58,6 +58,15 @@ public interface PetrinetFactory extends EFactory {
 	Token createToken();
 
 	/**
+	 * Returns a new object of class '<em>Net Stop Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Net Stop Event</em>'.
+	 * @generated
+	 */
+	NetStopEvent createNetStopEvent();
+
+	/**
 	 * Returns a new object of class '<em>Place Add Token Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

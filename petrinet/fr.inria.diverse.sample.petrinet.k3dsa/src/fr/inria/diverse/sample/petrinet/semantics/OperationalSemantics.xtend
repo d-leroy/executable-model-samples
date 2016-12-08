@@ -18,6 +18,8 @@ import static extension fr.inria.diverse.sample.petrinet.semantics.TransitionAsp
 @Aspect(className=Net)
 class NetAspect {
 	
+	private boolean running
+	
 	@InitializeModel
 	@Step
 	def void initializeModel(EList<String> args) {
@@ -29,22 +31,30 @@ class NetAspect {
 				}
 			}
 		}
+		_self.running = true
 	}
 
 	/**
 	 * Transformation rule that runs the Petri net.
 	 */
 	@Main
-	@Step
 	def void run() {
-		while (true) {
-			val enabledTransition = _self.transitions.findFirst[t|t.isEnabled]
-			if (enabledTransition != null) {
-				enabledTransition.fire
-			} else {
-				return
-			}
+		while (_self.running) {
+			_self.fireEnabledTransition()
 		}
+	}
+	
+	@Step
+	def void fireEnabledTransition() {
+		val enabledTransition = _self.transitions.findFirst[t|t.isEnabled]
+		if (enabledTransition != null) {
+			enabledTransition.fire
+		}
+	}
+	
+	@Step(eventTriggerable = true)
+	def void stop() {
+		_self.running = false
 	}
 }
 

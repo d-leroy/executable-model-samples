@@ -47,7 +47,7 @@ public class TransitionAspect {
 		manager.executeStep(_self, command, "Transition", "fire");
 	} else {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager(_self);
+				.getInstance().findEventManager();
 		if (eventManager != null) {
 			eventManager.manageEvents();
 		}

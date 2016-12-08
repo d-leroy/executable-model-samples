@@ -60,6 +60,7 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 			case PetrinetPackage.TRANSITION: return createTransition();
 			case PetrinetPackage.PLACE: return createPlace();
 			case PetrinetPackage.TOKEN: return createToken();
+			case PetrinetPackage.NET_STOP_EVENT: return createNetStopEvent();
 			case PetrinetPackage.PLACE_ADD_TOKEN_EVENT: return createPlaceAddTokenEvent();
 			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT: return createPlaceRemoveTokenEvent();
 			default:
@@ -100,6 +101,15 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 	 * @generated
 	 */
 	public Token createToken() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NetStopEvent createNetStopEvent() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 

@@ -8,15 +8,15 @@ import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Petrinet Net Run</b></em>'.
+ * A representation of the model object '<em><b>Petrinet Net Fire Enabled Transition</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see petrinetTrace.Steps.StepsPackage#getPetrinet_Net_Run()
+ * @see petrinetTrace.Steps.StepsPackage#getPetrinet_Net_FireEnabledTransition()
  * @model
  * @generated
  */
-public interface Petrinet_Net_Run extends SpecificStep, SequentialStep<Petrinet_Net_Run_AbstractSubStep> {
+public interface Petrinet_Net_FireEnabledTransition extends SpecificStep, SequentialStep<Petrinet_Net_FireEnabledTransition_AbstractSubStep> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,4 +26,4 @@ public interface Petrinet_Net_Run extends SpecificStep, SequentialStep<Petrinet_
 	 */
 	Net getCaller();
 
-} // Petrinet_Net_Run
+} // Petrinet_Net_FireEnabledTransition

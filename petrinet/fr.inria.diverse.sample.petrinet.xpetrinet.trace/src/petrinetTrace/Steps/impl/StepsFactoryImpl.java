@@ -56,10 +56,12 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION: return createPetrinet_Net_FireEnabledTransition();
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION_IMPLICIT_STEP: return createPetrinet_Net_FireEnabledTransition_ImplicitStep();
 			case StepsPackage.PETRINET_NET_INITIALIZE_MODEL: return createPetrinet_Net_InitializeModel();
 			case StepsPackage.PETRINET_NET_INITIALIZE_MODEL_IMPLICIT_STEP: return createPetrinet_Net_InitializeModel_ImplicitStep();
-			case StepsPackage.PETRINET_NET_RUN: return createPetrinet_Net_Run();
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP: return createPetrinet_Net_Run_ImplicitStep();
+			case StepsPackage.PETRINET_NET_STOP: return createPetrinet_Net_Stop();
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP: return createPetrinet_Net_Stop_ImplicitStep();
 			case StepsPackage.PETRINET_PLACE_ADD_TOKEN: return createPetrinet_Place_AddToken();
 			case StepsPackage.PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP: return createPetrinet_Place_AddToken_ImplicitStep();
 			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN: return createPetrinet_Place_RemoveToken();
@@ -70,6 +72,26 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Petrinet_Net_FireEnabledTransition createPetrinet_Net_FireEnabledTransition() {
+		Petrinet_Net_FireEnabledTransitionImpl petrinet_Net_FireEnabledTransition = new Petrinet_Net_FireEnabledTransitionImpl();
+		return petrinet_Net_FireEnabledTransition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Petrinet_Net_FireEnabledTransition_ImplicitStep createPetrinet_Net_FireEnabledTransition_ImplicitStep() {
+		Petrinet_Net_FireEnabledTransition_ImplicitStepImpl petrinet_Net_FireEnabledTransition_ImplicitStep = new Petrinet_Net_FireEnabledTransition_ImplicitStepImpl();
+		return petrinet_Net_FireEnabledTransition_ImplicitStep;
 	}
 
 	/**
@@ -97,9 +119,9 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Petrinet_Net_Run createPetrinet_Net_Run() {
-		Petrinet_Net_RunImpl petrinet_Net_Run = new Petrinet_Net_RunImpl();
-		return petrinet_Net_Run;
+	public Petrinet_Net_Stop createPetrinet_Net_Stop() {
+		Petrinet_Net_StopImpl petrinet_Net_Stop = new Petrinet_Net_StopImpl();
+		return petrinet_Net_Stop;
 	}
 
 	/**
@@ -107,9 +129,9 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Petrinet_Net_Run_ImplicitStep createPetrinet_Net_Run_ImplicitStep() {
-		Petrinet_Net_Run_ImplicitStepImpl petrinet_Net_Run_ImplicitStep = new Petrinet_Net_Run_ImplicitStepImpl();
-		return petrinet_Net_Run_ImplicitStep;
+	public Petrinet_Net_Stop_ImplicitStep createPetrinet_Net_Stop_ImplicitStep() {
+		Petrinet_Net_Stop_ImplicitStepImpl petrinet_Net_Stop_ImplicitStep = new Petrinet_Net_Stop_ImplicitStepImpl();
+		return petrinet_Net_Stop_ImplicitStep;
 	}
 
 	/**

@@ -71,6 +71,34 @@ public class StepsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION: {
+				Petrinet_Net_FireEnabledTransition petrinet_Net_FireEnabledTransition = (Petrinet_Net_FireEnabledTransition)theEObject;
+				T result = casePetrinet_Net_FireEnabledTransition(petrinet_Net_FireEnabledTransition);
+				if (result == null) result = caseSpecificStep(petrinet_Net_FireEnabledTransition);
+				if (result == null) result = caseSequentialStep(petrinet_Net_FireEnabledTransition);
+				if (result == null) result = caseBigStep(petrinet_Net_FireEnabledTransition);
+				if (result == null) result = caseStep(petrinet_Net_FireEnabledTransition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP: {
+				Petrinet_Net_FireEnabledTransition_AbstractSubStep petrinet_Net_FireEnabledTransition_AbstractSubStep = (Petrinet_Net_FireEnabledTransition_AbstractSubStep)theEObject;
+				T result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Net_FireEnabledTransition_AbstractSubStep);
+				if (result == null) result = caseSpecificStep(petrinet_Net_FireEnabledTransition_AbstractSubStep);
+				if (result == null) result = caseStep(petrinet_Net_FireEnabledTransition_AbstractSubStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.PETRINET_NET_FIRE_ENABLED_TRANSITION_IMPLICIT_STEP: {
+				Petrinet_Net_FireEnabledTransition_ImplicitStep petrinet_Net_FireEnabledTransition_ImplicitStep = (Petrinet_Net_FireEnabledTransition_ImplicitStep)theEObject;
+				T result = casePetrinet_Net_FireEnabledTransition_ImplicitStep(petrinet_Net_FireEnabledTransition_ImplicitStep);
+				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Net_FireEnabledTransition_ImplicitStep);
+				if (result == null) result = caseSmallStep(petrinet_Net_FireEnabledTransition_ImplicitStep);
+				if (result == null) result = caseSpecificStep(petrinet_Net_FireEnabledTransition_ImplicitStep);
+				if (result == null) result = caseStep(petrinet_Net_FireEnabledTransition_ImplicitStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case StepsPackage.PETRINET_NET_INITIALIZE_MODEL: {
 				Petrinet_Net_InitializeModel petrinet_Net_InitializeModel = (Petrinet_Net_InitializeModel)theEObject;
 				T result = casePetrinet_Net_InitializeModel(petrinet_Net_InitializeModel);
@@ -99,41 +127,48 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.PETRINET_NET_RUN: {
-				Petrinet_Net_Run petrinet_Net_Run = (Petrinet_Net_Run)theEObject;
-				T result = casePetrinet_Net_Run(petrinet_Net_Run);
-				if (result == null) result = caseSpecificStep(petrinet_Net_Run);
-				if (result == null) result = caseSequentialStep(petrinet_Net_Run);
-				if (result == null) result = caseBigStep(petrinet_Net_Run);
-				if (result == null) result = caseStep(petrinet_Net_Run);
+			case StepsPackage.PETRINET_NET_STOP: {
+				Petrinet_Net_Stop petrinet_Net_Stop = (Petrinet_Net_Stop)theEObject;
+				T result = casePetrinet_Net_Stop(petrinet_Net_Stop);
+				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Net_Stop);
+				if (result == null) result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Net_Stop);
+				if (result == null) result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Net_Stop);
+				if (result == null) result = caseSequentialStep(petrinet_Net_Stop);
+				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Net_Stop);
+				if (result == null) result = casePetrinet_Transition_Fire_AbstractSubStep(petrinet_Net_Stop);
+				if (result == null) result = casePetrinet_Net_InitializeModel_AbstractSubStep(petrinet_Net_Stop);
+				if (result == null) result = caseSpecificStep(petrinet_Net_Stop);
+				if (result == null) result = caseBigStep(petrinet_Net_Stop);
+				if (result == null) result = caseStep(petrinet_Net_Stop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.PETRINET_NET_RUN_ABSTRACT_SUB_STEP: {
-				Petrinet_Net_Run_AbstractSubStep petrinet_Net_Run_AbstractSubStep = (Petrinet_Net_Run_AbstractSubStep)theEObject;
-				T result = casePetrinet_Net_Run_AbstractSubStep(petrinet_Net_Run_AbstractSubStep);
-				if (result == null) result = caseSpecificStep(petrinet_Net_Run_AbstractSubStep);
-				if (result == null) result = caseStep(petrinet_Net_Run_AbstractSubStep);
+			case StepsPackage.PETRINET_NET_STOP_ABSTRACT_SUB_STEP: {
+				Petrinet_Net_Stop_AbstractSubStep petrinet_Net_Stop_AbstractSubStep = (Petrinet_Net_Stop_AbstractSubStep)theEObject;
+				T result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Net_Stop_AbstractSubStep);
+				if (result == null) result = caseSpecificStep(petrinet_Net_Stop_AbstractSubStep);
+				if (result == null) result = caseStep(petrinet_Net_Stop_AbstractSubStep);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.PETRINET_NET_RUN_IMPLICIT_STEP: {
-				Petrinet_Net_Run_ImplicitStep petrinet_Net_Run_ImplicitStep = (Petrinet_Net_Run_ImplicitStep)theEObject;
-				T result = casePetrinet_Net_Run_ImplicitStep(petrinet_Net_Run_ImplicitStep);
-				if (result == null) result = casePetrinet_Net_Run_AbstractSubStep(petrinet_Net_Run_ImplicitStep);
-				if (result == null) result = caseSmallStep(petrinet_Net_Run_ImplicitStep);
-				if (result == null) result = caseSpecificStep(petrinet_Net_Run_ImplicitStep);
-				if (result == null) result = caseStep(petrinet_Net_Run_ImplicitStep);
+			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP: {
+				Petrinet_Net_Stop_ImplicitStep petrinet_Net_Stop_ImplicitStep = (Petrinet_Net_Stop_ImplicitStep)theEObject;
+				T result = casePetrinet_Net_Stop_ImplicitStep(petrinet_Net_Stop_ImplicitStep);
+				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Net_Stop_ImplicitStep);
+				if (result == null) result = caseSmallStep(petrinet_Net_Stop_ImplicitStep);
+				if (result == null) result = caseSpecificStep(petrinet_Net_Stop_ImplicitStep);
+				if (result == null) result = caseStep(petrinet_Net_Stop_ImplicitStep);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case StepsPackage.PETRINET_PLACE_ADD_TOKEN: {
 				Petrinet_Place_AddToken petrinet_Place_AddToken = (Petrinet_Place_AddToken)theEObject;
 				T result = casePetrinet_Place_AddToken(petrinet_Place_AddToken);
+				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Place_AddToken);
 				if (result == null) result = caseSequentialStep(petrinet_Place_AddToken);
 				if (result == null) result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Place_AddToken);
 				if (result == null) result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Place_AddToken);
-				if (result == null) result = casePetrinet_Net_Run_AbstractSubStep(petrinet_Place_AddToken);
+				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Place_AddToken);
 				if (result == null) result = casePetrinet_Transition_Fire_AbstractSubStep(petrinet_Place_AddToken);
 				if (result == null) result = casePetrinet_Net_InitializeModel_AbstractSubStep(petrinet_Place_AddToken);
 				if (result == null) result = caseSpecificStep(petrinet_Place_AddToken);
@@ -163,10 +198,11 @@ public class StepsSwitch<T> extends Switch<T> {
 			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN: {
 				Petrinet_Place_RemoveToken petrinet_Place_RemoveToken = (Petrinet_Place_RemoveToken)theEObject;
 				T result = casePetrinet_Place_RemoveToken(petrinet_Place_RemoveToken);
+				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Place_RemoveToken);
 				if (result == null) result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Place_RemoveToken);
 				if (result == null) result = caseSequentialStep(petrinet_Place_RemoveToken);
 				if (result == null) result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Place_RemoveToken);
-				if (result == null) result = casePetrinet_Net_Run_AbstractSubStep(petrinet_Place_RemoveToken);
+				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Place_RemoveToken);
 				if (result == null) result = casePetrinet_Transition_Fire_AbstractSubStep(petrinet_Place_RemoveToken);
 				if (result == null) result = casePetrinet_Net_InitializeModel_AbstractSubStep(petrinet_Place_RemoveToken);
 				if (result == null) result = caseSpecificStep(petrinet_Place_RemoveToken);
@@ -196,7 +232,7 @@ public class StepsSwitch<T> extends Switch<T> {
 			case StepsPackage.PETRINET_TRANSITION_FIRE: {
 				Petrinet_Transition_Fire petrinet_Transition_Fire = (Petrinet_Transition_Fire)theEObject;
 				T result = casePetrinet_Transition_Fire(petrinet_Transition_Fire);
-				if (result == null) result = casePetrinet_Net_Run_AbstractSubStep(petrinet_Transition_Fire);
+				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Transition_Fire);
 				if (result == null) result = caseSequentialStep(petrinet_Transition_Fire);
 				if (result == null) result = caseSpecificStep(petrinet_Transition_Fire);
 				if (result == null) result = caseBigStep(petrinet_Transition_Fire);
@@ -239,6 +275,51 @@ public class StepsSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Fire Enabled Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Fire Enabled Transition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePetrinet_Net_FireEnabledTransition(Petrinet_Net_FireEnabledTransition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Fire Enabled Transition Abstract Sub Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Fire Enabled Transition Abstract Sub Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePetrinet_Net_FireEnabledTransition_AbstractSubStep(Petrinet_Net_FireEnabledTransition_AbstractSubStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Fire Enabled Transition Implicit Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Fire Enabled Transition Implicit Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePetrinet_Net_FireEnabledTransition_ImplicitStep(Petrinet_Net_FireEnabledTransition_ImplicitStep object) {
+		return null;
 	}
 
 	/**
@@ -287,47 +368,47 @@ public class StepsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Run</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Stop</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Run</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Stop</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePetrinet_Net_Run(Petrinet_Net_Run object) {
+	public T casePetrinet_Net_Stop(Petrinet_Net_Stop object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Run Abstract Sub Step</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Stop Abstract Sub Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Run Abstract Sub Step</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Stop Abstract Sub Step</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePetrinet_Net_Run_AbstractSubStep(Petrinet_Net_Run_AbstractSubStep object) {
+	public T casePetrinet_Net_Stop_AbstractSubStep(Petrinet_Net_Stop_AbstractSubStep object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Run Implicit Step</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Net Stop Implicit Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Run Implicit Step</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Petrinet Net Stop Implicit Step</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePetrinet_Net_Run_ImplicitStep(Petrinet_Net_Run_ImplicitStep object) {
+	public T casePetrinet_Net_Stop_ImplicitStep(Petrinet_Net_Stop_ImplicitStep object) {
 		return null;
 	}
 

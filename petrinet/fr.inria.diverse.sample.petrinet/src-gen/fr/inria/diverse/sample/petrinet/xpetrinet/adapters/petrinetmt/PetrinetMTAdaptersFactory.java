@@ -3,12 +3,14 @@ package fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt;
 import fr.inria.diverse.melange.adapters.AdaptersFactory;
 import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.NetAdapter;
+import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.NetStopEventAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceAddTokenEventAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceRemoveTokenEventAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TokenAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TransitionAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Place;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent;
@@ -47,6 +49,9 @@ public class PetrinetMTAdaptersFactory implements AdaptersFactory {
     }
     if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Token){
     	return createTokenAdapter((fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Token) o, res);
+    }
+    if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent){
+    	return createNetStopEventAdapter((fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent) o, res);
     }
     if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent){
     	return createPlaceAddTokenEventAdapter((fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent) o, res);
@@ -115,6 +120,21 @@ public class PetrinetMTAdaptersFactory implements AdaptersFactory {
     	adapter.setResource(res);
     	register.put(adaptee, adapter);
     	return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TokenAdapter) adapter;
+    }
+  }
+  
+  public NetStopEventAdapter createNetStopEventAdapter(final NetStopEvent adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.NetStopEventAdapter) adapter;
+    else {
+    	adapter = new fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.NetStopEventAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.NetStopEventAdapter) adapter;
     }
   }
   

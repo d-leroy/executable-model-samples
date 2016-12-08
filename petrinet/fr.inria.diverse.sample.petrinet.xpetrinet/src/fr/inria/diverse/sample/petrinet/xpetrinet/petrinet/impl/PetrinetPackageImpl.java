@@ -3,6 +3,7 @@
 package fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl;
 
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetFactory;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Place;
@@ -53,6 +54,13 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	private EClass tokenEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass netStopEventEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,6 +250,24 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNetStopEvent() {
+		return netStopEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNetStopEvent_Net() {
+		return (EReference)netStopEventEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPlaceAddTokenEvent() {
 		return placeAddTokenEventEClass;
 	}
@@ -317,6 +343,9 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 
 		tokenEClass = createEClass(TOKEN);
 
+		netStopEventEClass = createEClass(NET_STOP_EVENT);
+		createEReference(netStopEventEClass, NET_STOP_EVENT__NET);
+
 		placeAddTokenEventEClass = createEClass(PLACE_ADD_TOKEN_EVENT);
 		createEReference(placeAddTokenEventEClass, PLACE_ADD_TOKEN_EVENT__PLACE);
 
@@ -363,6 +392,10 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 
 		addEOperation(netEClass, null, "run", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		addEOperation(netEClass, null, "fireEnabledTransition", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(netEClass, null, "stop", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransition_Input(), this.getPlace(), null, "input", null, 1, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Output(), this.getPlace(), null, "output", null, 1, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -386,6 +419,9 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		addEOperation(placeEClass, ecorePackage.getEBoolean(), "removeToken_PreCondition", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tokenEClass, Token.class, "Token", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(netStopEventEClass, NetStopEvent.class, "NetStopEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNetStopEvent_Net(), this.getNet(), null, "net", null, 0, 1, NetStopEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeAddTokenEventEClass, PlaceAddTokenEvent.class, "PlaceAddTokenEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlaceAddTokenEvent_Place(), this.getPlace(), null, "place", null, 0, 1, PlaceAddTokenEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -416,6 +452,16 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		   });	
 		addAnnotation
 		  (netEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (netEClass.getEOperations().get(2), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (netEClass.getEOperations().get(3), 
 		   source, 
 		   new String[] {
 		   });	

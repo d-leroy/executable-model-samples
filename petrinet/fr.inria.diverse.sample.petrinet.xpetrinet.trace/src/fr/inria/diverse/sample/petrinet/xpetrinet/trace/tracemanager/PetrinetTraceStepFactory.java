@@ -15,6 +15,14 @@ public class PetrinetTraceStepFactory implements IStepFactory {
 		String stepRule = fr.inria.diverse.trace.commons.EcoreCraftingUtil.getFQN(ec, ".") + "."
 				+ mse.getAction().getName();
 
+		if (mse.getAction().getName().equalsIgnoreCase("fireEnabledTransition")
+				&& (ec.getClassifierID() == fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage.eINSTANCE
+						.getNet().getClassifierID()))
+
+		{
+			step = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_FireEnabledTransition();
+		} else
+
 		if (mse.getAction().getName().equalsIgnoreCase("initializeModel")
 				&& (ec.getClassifierID() == fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage.eINSTANCE
 						.getNet().getClassifierID()))
@@ -23,12 +31,12 @@ public class PetrinetTraceStepFactory implements IStepFactory {
 			step = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_InitializeModel();
 		} else
 
-		if (mse.getAction().getName().equalsIgnoreCase("run")
+		if (mse.getAction().getName().equalsIgnoreCase("stop")
 				&& (ec.getClassifierID() == fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage.eINSTANCE
 						.getNet().getClassifierID()))
 
 		{
-			step = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_Run();
+			step = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_Stop();
 		} else
 
 		if (mse.getAction().getName().equalsIgnoreCase("addToken")

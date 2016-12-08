@@ -22,6 +22,24 @@ public interface StepsFactory extends EFactory {
 	StepsFactory eINSTANCE = petrinetTrace.Steps.impl.StepsFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Petrinet Net Fire Enabled Transition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Petrinet Net Fire Enabled Transition</em>'.
+	 * @generated
+	 */
+	Petrinet_Net_FireEnabledTransition createPetrinet_Net_FireEnabledTransition();
+
+	/**
+	 * Returns a new object of class '<em>Petrinet Net Fire Enabled Transition Implicit Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Petrinet Net Fire Enabled Transition Implicit Step</em>'.
+	 * @generated
+	 */
+	Petrinet_Net_FireEnabledTransition_ImplicitStep createPetrinet_Net_FireEnabledTransition_ImplicitStep();
+
+	/**
 	 * Returns a new object of class '<em>Petrinet Net Initialize Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -40,22 +58,22 @@ public interface StepsFactory extends EFactory {
 	Petrinet_Net_InitializeModel_ImplicitStep createPetrinet_Net_InitializeModel_ImplicitStep();
 
 	/**
-	 * Returns a new object of class '<em>Petrinet Net Run</em>'.
+	 * Returns a new object of class '<em>Petrinet Net Stop</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Petrinet Net Run</em>'.
+	 * @return a new object of class '<em>Petrinet Net Stop</em>'.
 	 * @generated
 	 */
-	Petrinet_Net_Run createPetrinet_Net_Run();
+	Petrinet_Net_Stop createPetrinet_Net_Stop();
 
 	/**
-	 * Returns a new object of class '<em>Petrinet Net Run Implicit Step</em>'.
+	 * Returns a new object of class '<em>Petrinet Net Stop Implicit Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Petrinet Net Run Implicit Step</em>'.
+	 * @return a new object of class '<em>Petrinet Net Stop Implicit Step</em>'.
 	 * @generated
 	 */
-	Petrinet_Net_Run_ImplicitStep createPetrinet_Net_Run_ImplicitStep();
+	Petrinet_Net_Stop_ImplicitStep createPetrinet_Net_Stop_ImplicitStep();
 
 	/**
 	 * Returns a new object of class '<em>Petrinet Place Add Token</em>'.

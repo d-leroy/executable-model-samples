@@ -60,6 +60,7 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 			case PetrinetPackage.TRANSITION: return createTransition();
 			case PetrinetPackage.PLACE: return createPlace();
 			case PetrinetPackage.TOKEN: return createToken();
+			case PetrinetPackage.NET_STOP_EVENT: return createNetStopEvent();
 			case PetrinetPackage.PLACE_ADD_TOKEN_EVENT: return createPlaceAddTokenEvent();
 			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT: return createPlaceRemoveTokenEvent();
 			default:
@@ -105,6 +106,16 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 	public Token createToken() {
 		TokenImpl token = new TokenImpl();
 		return token;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NetStopEvent createNetStopEvent() {
+		NetStopEventImpl netStopEvent = new NetStopEventImpl();
+		return netStopEvent;
 	}
 
 	/**
