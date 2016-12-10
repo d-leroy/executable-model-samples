@@ -67,23 +67,6 @@ class PlaceAspect {
 	@Containment
 	public EList<Token> tokens;
 	
-	@Step(eventTriggerable = true)
-	public def void addToken() {
-		_self.tokens.add(PetrinetFactory.eINSTANCE.createToken)
-	}
-	
-	public def boolean addToken_PreCondition() {
-		_self.tokens.empty
-	}
-	
-	@Step(eventTriggerable = true)
-	public def void removeToken() {
-		_self.tokens.remove(0)
-	}
-	
-	public def boolean removeToken_PreCondition() {
-		!_self.tokens.empty
-	}
 }
 
 @Aspect(className=Transition)
@@ -100,7 +83,7 @@ class TransitionAspect {
 	/**
 	 * Transformation rule that fires the Transition.
 	 */
-	@Step
+	@Step(eventTriggerable = true)
 	public def void fire() {
 
 		// Checking if input places are enabled
@@ -114,5 +97,9 @@ class TransitionAspect {
 			for (Place output : _self.output)
 				output.tokens.add(PetrinetFactory.eINSTANCE.createToken)
 		}
+	}
+	
+	public def boolean fire_PreCondition() {
+		return _self.input.forall[place|place.tokens.size > 0]
 	}
 }

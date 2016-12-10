@@ -51,6 +51,11 @@ public class TransitionAdapter extends EObjectAdapter<Transition> implements fr.
   }
   
   @Override
+  public boolean fire_PreCondition() {
+    return fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspect.fire_PreCondition(adaptee);
+  }
+  
+  @Override
   public boolean isEnabled() {
     return fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspect.isEnabled(adaptee);
   }

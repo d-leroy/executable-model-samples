@@ -232,60 +232,32 @@ public interface PetrinetPackage extends EPackage {
 	int NET_STOP_EVENT_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceAddTokenEventImpl <em>Place Add Token Event</em>}' class.
+	 * The meta object id for the '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.TransitionFireEventImpl <em>Transition Fire Event</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceAddTokenEventImpl
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PetrinetPackageImpl#getPlaceAddTokenEvent()
+	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.TransitionFireEventImpl
+	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PetrinetPackageImpl#getTransitionFireEvent()
 	 * @generated
 	 */
-	int PLACE_ADD_TOKEN_EVENT = 5;
+	int TRANSITION_FIRE_EVENT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Place</b></em>' reference.
+	 * The feature id for the '<em><b>Transition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_ADD_TOKEN_EVENT__PLACE = 0;
+	int TRANSITION_FIRE_EVENT__TRANSITION = 0;
 
 	/**
-	 * The number of structural features of the '<em>Place Add Token Event</em>' class.
+	 * The number of structural features of the '<em>Transition Fire Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_ADD_TOKEN_EVENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceRemoveTokenEventImpl <em>Place Remove Token Event</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceRemoveTokenEventImpl
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PetrinetPackageImpl#getPlaceRemoveTokenEvent()
-	 * @generated
-	 */
-	int PLACE_REMOVE_TOKEN_EVENT = 6;
-
-	/**
-	 * The feature id for the '<em><b>Place</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACE_REMOVE_TOKEN_EVENT__PLACE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Place Remove Token Event</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACE_REMOVE_TOKEN_EVENT_FEATURE_COUNT = 1;
+	int TRANSITION_FIRE_EVENT_FEATURE_COUNT = 1;
 
 
 	/**
@@ -438,46 +410,25 @@ public interface PetrinetPackage extends EPackage {
 	EReference getNetStopEvent_Net();
 
 	/**
-	 * Returns the meta object for class '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent <em>Place Add Token Event</em>}'.
+	 * Returns the meta object for class '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent <em>Transition Fire Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Place Add Token Event</em>'.
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent
+	 * @return the meta object for class '<em>Transition Fire Event</em>'.
+	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent
 	 * @generated
 	 */
-	EClass getPlaceAddTokenEvent();
+	EClass getTransitionFireEvent();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent#getPlace <em>Place</em>}'.
+	 * Returns the meta object for the reference '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent#getTransition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Place</em>'.
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent#getPlace()
-	 * @see #getPlaceAddTokenEvent()
+	 * @return the meta object for the reference '<em>Transition</em>'.
+	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent#getTransition()
+	 * @see #getTransitionFireEvent()
 	 * @generated
 	 */
-	EReference getPlaceAddTokenEvent_Place();
-
-	/**
-	 * Returns the meta object for class '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent <em>Place Remove Token Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Place Remove Token Event</em>'.
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent
-	 * @generated
-	 */
-	EClass getPlaceRemoveTokenEvent();
-
-	/**
-	 * Returns the meta object for the reference '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent#getPlace <em>Place</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Place</em>'.
-	 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent#getPlace()
-	 * @see #getPlaceRemoveTokenEvent()
-	 * @generated
-	 */
-	EReference getPlaceRemoveTokenEvent_Place();
+	EReference getTransitionFireEvent_Transition();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -624,40 +575,22 @@ public interface PetrinetPackage extends EPackage {
 		EReference NET_STOP_EVENT__NET = eINSTANCE.getNetStopEvent_Net();
 
 		/**
-		 * The meta object literal for the '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceAddTokenEventImpl <em>Place Add Token Event</em>}' class.
+		 * The meta object literal for the '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.TransitionFireEventImpl <em>Transition Fire Event</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceAddTokenEventImpl
-		 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PetrinetPackageImpl#getPlaceAddTokenEvent()
+		 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.TransitionFireEventImpl
+		 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PetrinetPackageImpl#getTransitionFireEvent()
 		 * @generated
 		 */
-		EClass PLACE_ADD_TOKEN_EVENT = eINSTANCE.getPlaceAddTokenEvent();
+		EClass TRANSITION_FIRE_EVENT = eINSTANCE.getTransitionFireEvent();
 
 		/**
-		 * The meta object literal for the '<em><b>Place</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Transition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLACE_ADD_TOKEN_EVENT__PLACE = eINSTANCE.getPlaceAddTokenEvent_Place();
-
-		/**
-		 * The meta object literal for the '{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceRemoveTokenEventImpl <em>Place Remove Token Event</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceRemoveTokenEventImpl
-		 * @see fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PetrinetPackageImpl#getPlaceRemoveTokenEvent()
-		 * @generated
-		 */
-		EClass PLACE_REMOVE_TOKEN_EVENT = eINSTANCE.getPlaceRemoveTokenEvent();
-
-		/**
-		 * The meta object literal for the '<em><b>Place</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PLACE_REMOVE_TOKEN_EVENT__PLACE = eINSTANCE.getPlaceRemoveTokenEvent_Place();
+		EReference TRANSITION_FIRE_EVENT__TRANSITION = eINSTANCE.getTransitionFireEvent_Transition();
 
 	}
 

@@ -30,12 +30,6 @@ import petrinetTrace.Steps.Petrinet_Net_InitializeModel_ImplicitStep;
 import petrinetTrace.Steps.Petrinet_Net_Stop;
 import petrinetTrace.Steps.Petrinet_Net_Stop_AbstractSubStep;
 import petrinetTrace.Steps.Petrinet_Net_Stop_ImplicitStep;
-import petrinetTrace.Steps.Petrinet_Place_AddToken;
-import petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Place_AddToken_ImplicitStep;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken_ImplicitStep;
 import petrinetTrace.Steps.Petrinet_Transition_Fire;
 import petrinetTrace.Steps.Petrinet_Transition_Fire_AbstractSubStep;
 import petrinetTrace.Steps.Petrinet_Transition_Fire_ImplicitStep;
@@ -115,48 +109,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * @generated
 	 */
 	private EClass petrinet_Net_Stop_ImplicitStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass petrinet_Place_AddTokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass petrinet_Place_AddToken_AbstractSubStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass petrinet_Place_AddToken_ImplicitStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass petrinet_Place_RemoveTokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass petrinet_Place_RemoveToken_AbstractSubStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass petrinet_Place_RemoveToken_ImplicitStepEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -355,60 +307,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPetrinet_Place_AddToken() {
-		return petrinet_Place_AddTokenEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPetrinet_Place_AddToken_AbstractSubStep() {
-		return petrinet_Place_AddToken_AbstractSubStepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPetrinet_Place_AddToken_ImplicitStep() {
-		return petrinet_Place_AddToken_ImplicitStepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPetrinet_Place_RemoveToken() {
-		return petrinet_Place_RemoveTokenEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPetrinet_Place_RemoveToken_AbstractSubStep() {
-		return petrinet_Place_RemoveToken_AbstractSubStepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPetrinet_Place_RemoveToken_ImplicitStep() {
-		return petrinet_Place_RemoveToken_ImplicitStepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPetrinet_Transition_Fire() {
 		return petrinet_Transition_FireEClass;
 	}
@@ -513,18 +411,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		petrinet_Net_Stop_ImplicitStepEClass = createEClass(PETRINET_NET_STOP_IMPLICIT_STEP);
 
-		petrinet_Place_AddTokenEClass = createEClass(PETRINET_PLACE_ADD_TOKEN);
-
-		petrinet_Place_AddToken_AbstractSubStepEClass = createEClass(PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP);
-
-		petrinet_Place_AddToken_ImplicitStepEClass = createEClass(PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP);
-
-		petrinet_Place_RemoveTokenEClass = createEClass(PETRINET_PLACE_REMOVE_TOKEN);
-
-		petrinet_Place_RemoveToken_AbstractSubStepEClass = createEClass(PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP);
-
-		petrinet_Place_RemoveToken_ImplicitStepEClass = createEClass(PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP);
-
 		petrinet_Transition_FireEClass = createEClass(PETRINET_TRANSITION_FIRE);
 
 		petrinet_Transition_Fire_AbstractSubStepEClass = createEClass(PETRINET_TRANSITION_FIRE_ABSTRACT_SUB_STEP);
@@ -564,7 +450,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 		// Obtain other dependent packages
 		TracePackage theTracePackage = (TracePackage)EPackage.Registry.INSTANCE.getEPackage(TracePackage.eNS_URI);
 		PetrinetPackage thePetrinetPackage = (PetrinetPackage)EPackage.Registry.INSTANCE.getEPackage(PetrinetPackage.eNS_URI);
-		petrinetTrace.States.petrinet.PetrinetPackage thePetrinetPackage_1 = (petrinetTrace.States.petrinet.PetrinetPackage)EPackage.Registry.INSTANCE.getEPackage(petrinetTrace.States.petrinet.PetrinetPackage.eNS_URI);
 		StatesPackage theStatesPackage = (StatesPackage)EPackage.Registry.INSTANCE.getEPackage(StatesPackage.eNS_URI);
 
 		// Create type parameters
@@ -592,10 +477,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 		petrinet_Net_InitializeModel_ImplicitStepEClass.getESuperTypes().add(theTracePackage.getSmallStep());
 		g1 = createEGenericType(this.getPetrinet_Net_FireEnabledTransition_AbstractSubStep());
 		petrinet_Net_StopEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Place_AddToken_AbstractSubStep());
-		petrinet_Net_StopEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Place_RemoveToken_AbstractSubStep());
-		petrinet_Net_StopEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getSpecificStep());
 		petrinet_Net_StopEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theTracePackage.getSequentialStep());
@@ -612,54 +493,18 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 		petrinet_Net_Stop_ImplicitStepEClass.getESuperTypes().add(this.getPetrinet_Net_Stop_AbstractSubStep());
 		petrinet_Net_Stop_ImplicitStepEClass.getESuperTypes().add(theTracePackage.getSmallStep());
 		g1 = createEGenericType(this.getPetrinet_Net_FireEnabledTransition_AbstractSubStep());
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getSpecificStep());
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theTracePackage.getSequentialStep());
-		g2 = createEGenericType(this.getPetrinet_Place_AddToken_AbstractSubStep());
-		g1.getETypeArguments().add(g2);
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Place_AddToken_AbstractSubStep());
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Place_RemoveToken_AbstractSubStep());
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
+		petrinet_Transition_FireEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getPetrinet_Net_Stop_AbstractSubStep());
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Transition_Fire_AbstractSubStep());
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Net_InitializeModel_AbstractSubStep());
-		petrinet_Place_AddTokenEClass.getEGenericSuperTypes().add(g1);
-		petrinet_Place_AddToken_AbstractSubStepEClass.getESuperTypes().add(this.getSpecificStep());
-		petrinet_Place_AddToken_ImplicitStepEClass.getESuperTypes().add(this.getPetrinet_Place_AddToken_AbstractSubStep());
-		petrinet_Place_AddToken_ImplicitStepEClass.getESuperTypes().add(theTracePackage.getSmallStep());
-		g1 = createEGenericType(this.getPetrinet_Net_FireEnabledTransition_AbstractSubStep());
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Place_AddToken_AbstractSubStep());
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getSpecificStep());
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theTracePackage.getSequentialStep());
-		g2 = createEGenericType(this.getPetrinet_Place_RemoveToken_AbstractSubStep());
-		g1.getETypeArguments().add(g2);
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Place_RemoveToken_AbstractSubStep());
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Net_Stop_AbstractSubStep());
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Transition_Fire_AbstractSubStep());
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPetrinet_Net_InitializeModel_AbstractSubStep());
-		petrinet_Place_RemoveTokenEClass.getEGenericSuperTypes().add(g1);
-		petrinet_Place_RemoveToken_AbstractSubStepEClass.getESuperTypes().add(this.getSpecificStep());
-		petrinet_Place_RemoveToken_ImplicitStepEClass.getESuperTypes().add(this.getPetrinet_Place_RemoveToken_AbstractSubStep());
-		petrinet_Place_RemoveToken_ImplicitStepEClass.getESuperTypes().add(theTracePackage.getSmallStep());
-		g1 = createEGenericType(this.getPetrinet_Net_FireEnabledTransition_AbstractSubStep());
 		petrinet_Transition_FireEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getSpecificStep());
 		petrinet_Transition_FireEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theTracePackage.getSequentialStep());
 		g2 = createEGenericType(this.getPetrinet_Transition_Fire_AbstractSubStep());
 		g1.getETypeArguments().add(g2);
+		petrinet_Transition_FireEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getPetrinet_Transition_Fire_AbstractSubStep());
+		petrinet_Transition_FireEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getPetrinet_Net_InitializeModel_AbstractSubStep());
 		petrinet_Transition_FireEClass.getEGenericSuperTypes().add(g1);
 		petrinet_Transition_Fire_AbstractSubStepEClass.getESuperTypes().add(this.getSpecificStep());
 		petrinet_Transition_Fire_ImplicitStepEClass.getESuperTypes().add(this.getPetrinet_Transition_Fire_AbstractSubStep());
@@ -691,22 +536,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 		initEClass(petrinet_Net_Stop_AbstractSubStepEClass, Petrinet_Net_Stop_AbstractSubStep.class, "Petrinet_Net_Stop_AbstractSubStep", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(petrinet_Net_Stop_ImplicitStepEClass, Petrinet_Net_Stop_ImplicitStep.class, "Petrinet_Net_Stop_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(petrinet_Place_AddTokenEClass, Petrinet_Place_AddToken.class, "Petrinet_Place_AddToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		addEOperation(petrinet_Place_AddTokenEClass, thePetrinetPackage_1.getTracedPlace(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(petrinet_Place_AddToken_AbstractSubStepEClass, Petrinet_Place_AddToken_AbstractSubStep.class, "Petrinet_Place_AddToken_AbstractSubStep", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(petrinet_Place_AddToken_ImplicitStepEClass, Petrinet_Place_AddToken_ImplicitStep.class, "Petrinet_Place_AddToken_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(petrinet_Place_RemoveTokenEClass, Petrinet_Place_RemoveToken.class, "Petrinet_Place_RemoveToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		addEOperation(petrinet_Place_RemoveTokenEClass, thePetrinetPackage_1.getTracedPlace(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(petrinet_Place_RemoveToken_AbstractSubStepEClass, Petrinet_Place_RemoveToken_AbstractSubStep.class, "Petrinet_Place_RemoveToken_AbstractSubStep", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(petrinet_Place_RemoveToken_ImplicitStepEClass, Petrinet_Place_RemoveToken_ImplicitStep.class, "Petrinet_Place_RemoveToken_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(petrinet_Transition_FireEClass, Petrinet_Transition_Fire.class, "Petrinet_Transition_Fire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

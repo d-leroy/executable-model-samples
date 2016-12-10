@@ -44,6 +44,9 @@
       <genOperations>
         <ecoreOperation href="PetrinetMT.ecore#//Transition/fire"/>
       </genOperations>
+      <genOperations>
+        <ecoreOperation href="PetrinetMT.ecore#//Transition/fire_PreCondition"/>
+      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="PetrinetMT.ecore#//Place"/>
@@ -56,18 +59,6 @@
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="PetrinetMT.ecore#//Place/tokens"/>
       </genFeatures>
-      <genOperations>
-        <ecoreOperation href="PetrinetMT.ecore#//Place/addToken"/>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="PetrinetMT.ecore#//Place/addToken_PreCondition"/>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="PetrinetMT.ecore#//Place/removeToken"/>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="PetrinetMT.ecore#//Place/removeToken_PreCondition"/>
-      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="PetrinetMT.ecore#//Token"/>
@@ -79,15 +70,9 @@
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="PetrinetMT.ecore#//PlaceAddTokenEvent"/>
+      <ecoreClass href="PetrinetMT.ecore#//TransitionFireEvent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="PetrinetMT.ecore#//PlaceAddTokenEvent/place"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="PetrinetMT.ecore#//PlaceRemoveTokenEvent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="PetrinetMT.ecore#//PlaceRemoveTokenEvent/place"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="PetrinetMT.ecore#//TransitionFireEvent/transition"/>
       </genFeatures>
     </genClasses>
   </genPackages>

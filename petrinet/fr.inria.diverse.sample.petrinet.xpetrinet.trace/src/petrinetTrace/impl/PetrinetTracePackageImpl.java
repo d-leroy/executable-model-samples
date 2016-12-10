@@ -158,7 +158,7 @@ public class PetrinetTracePackageImpl extends EPackageImpl implements PetrinetTr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Petrinet_Place_AddToken_Sequence() {
+	public EReference getSpecificTrace_Petrinet_Transition_Fire_Sequence() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -167,7 +167,7 @@ public class PetrinetTracePackageImpl extends EPackageImpl implements PetrinetTr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Petrinet_Place_RemoveToken_Sequence() {
+	public EReference getSpecificTrace_Petrinet_tracedPlaces() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -176,7 +176,7 @@ public class PetrinetTracePackageImpl extends EPackageImpl implements PetrinetTr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Petrinet_Transition_Fire_Sequence() {
+	public EReference getSpecificTrace_Petrinet_tracedTokens() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -185,26 +185,8 @@ public class PetrinetTracePackageImpl extends EPackageImpl implements PetrinetTr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Petrinet_tracedPlaces() {
-		return (EReference)specificTraceEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSpecificTrace_Petrinet_tracedTokens() {
-		return (EReference)specificTraceEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getSpecificTrace_StatesTrace() {
-		return (EReference)specificTraceEClass.getEStructuralFeatures().get(8);
+		return (EReference)specificTraceEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -239,8 +221,6 @@ public class PetrinetTracePackageImpl extends EPackageImpl implements PetrinetTr
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_NET_FIRE_ENABLED_TRANSITION_SEQUENCE);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_NET_INITIALIZE_MODEL_SEQUENCE);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_NET_STOP_SEQUENCE);
-		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE);
-		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_TRACED_PLACES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__PETRINET_TRACED_TOKENS);
@@ -297,8 +277,6 @@ public class PetrinetTracePackageImpl extends EPackageImpl implements PetrinetTr
 		initEReference(getSpecificTrace_Petrinet_Net_FireEnabledTransition_Sequence(), theStepsPackage.getPetrinet_Net_FireEnabledTransition(), null, "Petrinet_Net_FireEnabledTransition_Sequence", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificTrace_Petrinet_Net_InitializeModel_Sequence(), theStepsPackage.getPetrinet_Net_InitializeModel(), null, "Petrinet_Net_InitializeModel_Sequence", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificTrace_Petrinet_Net_Stop_Sequence(), theStepsPackage.getPetrinet_Net_Stop(), null, "Petrinet_Net_Stop_Sequence", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecificTrace_Petrinet_Place_AddToken_Sequence(), theStepsPackage.getPetrinet_Place_AddToken(), null, "Petrinet_Place_AddToken_Sequence", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecificTrace_Petrinet_Place_RemoveToken_Sequence(), theStepsPackage.getPetrinet_Place_RemoveToken(), null, "Petrinet_Place_RemoveToken_Sequence", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificTrace_Petrinet_Transition_Fire_Sequence(), theStepsPackage.getPetrinet_Transition_Fire(), null, "Petrinet_Transition_Fire_Sequence", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificTrace_Petrinet_tracedPlaces(), thePetrinetPackage_1.getTracedPlace(), null, "petrinet_tracedPlaces", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Petrinet_tracedTokens(), thePetrinetPackage_1.getTracedToken(), null, "petrinet_tracedTokens", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

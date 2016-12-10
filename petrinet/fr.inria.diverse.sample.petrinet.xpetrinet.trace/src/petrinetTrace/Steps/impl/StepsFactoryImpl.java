@@ -62,10 +62,6 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 			case StepsPackage.PETRINET_NET_INITIALIZE_MODEL_IMPLICIT_STEP: return createPetrinet_Net_InitializeModel_ImplicitStep();
 			case StepsPackage.PETRINET_NET_STOP: return createPetrinet_Net_Stop();
 			case StepsPackage.PETRINET_NET_STOP_IMPLICIT_STEP: return createPetrinet_Net_Stop_ImplicitStep();
-			case StepsPackage.PETRINET_PLACE_ADD_TOKEN: return createPetrinet_Place_AddToken();
-			case StepsPackage.PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP: return createPetrinet_Place_AddToken_ImplicitStep();
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN: return createPetrinet_Place_RemoveToken();
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP: return createPetrinet_Place_RemoveToken_ImplicitStep();
 			case StepsPackage.PETRINET_TRANSITION_FIRE: return createPetrinet_Transition_Fire();
 			case StepsPackage.PETRINET_TRANSITION_FIRE_IMPLICIT_STEP: return createPetrinet_Transition_Fire_ImplicitStep();
 			case StepsPackage.ROOT_IMPLICIT_STEP: return createRootImplicitStep();
@@ -132,46 +128,6 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	public Petrinet_Net_Stop_ImplicitStep createPetrinet_Net_Stop_ImplicitStep() {
 		Petrinet_Net_Stop_ImplicitStepImpl petrinet_Net_Stop_ImplicitStep = new Petrinet_Net_Stop_ImplicitStepImpl();
 		return petrinet_Net_Stop_ImplicitStep;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Petrinet_Place_AddToken createPetrinet_Place_AddToken() {
-		Petrinet_Place_AddTokenImpl petrinet_Place_AddToken = new Petrinet_Place_AddTokenImpl();
-		return petrinet_Place_AddToken;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Petrinet_Place_AddToken_ImplicitStep createPetrinet_Place_AddToken_ImplicitStep() {
-		Petrinet_Place_AddToken_ImplicitStepImpl petrinet_Place_AddToken_ImplicitStep = new Petrinet_Place_AddToken_ImplicitStepImpl();
-		return petrinet_Place_AddToken_ImplicitStep;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Petrinet_Place_RemoveToken createPetrinet_Place_RemoveToken() {
-		Petrinet_Place_RemoveTokenImpl petrinet_Place_RemoveToken = new Petrinet_Place_RemoveTokenImpl();
-		return petrinet_Place_RemoveToken;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Petrinet_Place_RemoveToken_ImplicitStep createPetrinet_Place_RemoveToken_ImplicitStep() {
-		Petrinet_Place_RemoveToken_ImplicitStepImpl petrinet_Place_RemoveToken_ImplicitStep = new Petrinet_Place_RemoveToken_ImplicitStepImpl();
-		return petrinet_Place_RemoveToken_ImplicitStep;
 	}
 
 	/**

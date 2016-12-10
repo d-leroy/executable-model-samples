@@ -15,8 +15,6 @@ import petrinetTrace.States.petrinet.TracedToken;
 import petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition;
 import petrinetTrace.Steps.Petrinet_Net_InitializeModel;
 import petrinetTrace.Steps.Petrinet_Net_Stop;
-import petrinetTrace.Steps.Petrinet_Place_AddToken;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken;
 import petrinetTrace.Steps.Petrinet_Transition_Fire;
 import petrinetTrace.Steps.SpecificStep;
 
@@ -32,8 +30,6 @@ import petrinetTrace.Steps.SpecificStep;
  *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_Net_FireEnabledTransition_Sequence <em>Petrinet Net Fire Enabled Transition Sequence</em>}</li>
  *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_Net_InitializeModel_Sequence <em>Petrinet Net Initialize Model Sequence</em>}</li>
  *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_Net_Stop_Sequence <em>Petrinet Net Stop Sequence</em>}</li>
- *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_Place_AddToken_Sequence <em>Petrinet Place Add Token Sequence</em>}</li>
- *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_Place_RemoveToken_Sequence <em>Petrinet Place Remove Token Sequence</em>}</li>
  *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_Transition_Fire_Sequence <em>Petrinet Transition Fire Sequence</em>}</li>
  *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_tracedPlaces <em>Petrinet traced Places</em>}</li>
  *   <li>{@link petrinetTrace.SpecificTrace#getPetrinet_tracedTokens <em>Petrinet traced Tokens</em>}</li>
@@ -92,38 +88,6 @@ public interface SpecificTrace extends Trace<SequentialStep<SpecificStep>> {
 	 * @generated
 	 */
 	EList<Petrinet_Net_Stop> getPetrinet_Net_Stop_Sequence();
-
-	/**
-	 * Returns the value of the '<em><b>Petrinet Place Add Token Sequence</b></em>' reference list.
-	 * The list contents are of type {@link petrinetTrace.Steps.Petrinet_Place_AddToken}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Petrinet Place Add Token Sequence</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Petrinet Place Add Token Sequence</em>' reference list.
-	 * @see petrinetTrace.PetrinetTracePackage#getSpecificTrace_Petrinet_Place_AddToken_Sequence()
-	 * @model
-	 * @generated
-	 */
-	EList<Petrinet_Place_AddToken> getPetrinet_Place_AddToken_Sequence();
-
-	/**
-	 * Returns the value of the '<em><b>Petrinet Place Remove Token Sequence</b></em>' reference list.
-	 * The list contents are of type {@link petrinetTrace.Steps.Petrinet_Place_RemoveToken}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Petrinet Place Remove Token Sequence</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Petrinet Place Remove Token Sequence</em>' reference list.
-	 * @see petrinetTrace.PetrinetTracePackage#getSpecificTrace_Petrinet_Place_RemoveToken_Sequence()
-	 * @model
-	 * @generated
-	 */
-	EList<Petrinet_Place_RemoveToken> getPetrinet_Place_RemoveToken_Sequence();
 
 	/**
 	 * Returns the value of the '<em><b>Petrinet Transition Fire Sequence</b></em>' reference list.

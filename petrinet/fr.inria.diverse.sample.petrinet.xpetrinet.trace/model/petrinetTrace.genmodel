@@ -15,12 +15,6 @@
         <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Net_Stop_Sequence"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Place_AddToken_Sequence"/>
-      </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Place_RemoveToken_Sequence"/>
-      </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="petrinetTrace.ecore#//SpecificTrace/Petrinet_Transition_Fire_Sequence"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
@@ -70,30 +64,6 @@
       </genClasses>
       <genClasses>
         <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Net_Stop_ImplicitStep"/>
-      </genClasses>
-      <genClasses>
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Place_AddToken"/>
-        <genOperations>
-          <ecoreOperation href="petrinetTrace.ecore#//Steps/Petrinet_Place_AddToken/getCaller"/>
-        </genOperations>
-      </genClasses>
-      <genClasses image="false">
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Place_AddToken_AbstractSubStep"/>
-      </genClasses>
-      <genClasses>
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Place_AddToken_ImplicitStep"/>
-      </genClasses>
-      <genClasses>
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Place_RemoveToken"/>
-        <genOperations>
-          <ecoreOperation href="petrinetTrace.ecore#//Steps/Petrinet_Place_RemoveToken/getCaller"/>
-        </genOperations>
-      </genClasses>
-      <genClasses image="false">
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Place_RemoveToken_AbstractSubStep"/>
-      </genClasses>
-      <genClasses>
-        <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Place_RemoveToken_ImplicitStep"/>
       </genClasses>
       <genClasses>
         <ecoreClass href="petrinetTrace.ecore#//Steps/Petrinet_Transition_Fire"/>

@@ -4,8 +4,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Petrinet_Net_FireEnabledTransition_Sequence" upperBound="-1" eType="//Steps/Petrinet_Net_FireEnabledTransition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Petrinet_Net_InitializeModel_Sequence" upperBound="-1" eType="//Steps/Petrinet_Net_InitializeModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Petrinet_Net_Stop_Sequence" upperBound="-1" eType="//Steps/Petrinet_Net_Stop"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Petrinet_Place_AddToken_Sequence" upperBound="-1" eType="//Steps/Petrinet_Place_AddToken"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Petrinet_Place_RemoveToken_Sequence" upperBound="-1" eType="//Steps/Petrinet_Place_RemoveToken"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Petrinet_Transition_Fire_Sequence" upperBound="-1" eType="//Steps/Petrinet_Transition_Fire"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="petrinet_tracedPlaces" ordered="false" upperBound="-1" eType="//States/petrinet/TracedPlace" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="petrinet_tracedTokens" ordered="false" upperBound="-1" eType="//States/petrinet/TracedToken" containment="true"/>
@@ -63,8 +61,6 @@
         <eType xsi:type="ecore:EClass" href="../../fr.inria.diverse.sample.petrinet.xpetrinet/model/XPetrinet.ecore#//Net"/>
       </eOperations>
       <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_FireEnabledTransition_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Place_AddToken_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Place_RemoveToken_AbstractSubStep"/>
       <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
       <eGenericSuperTypes>
         <eTypeArguments eClassifier="//Steps/Petrinet_Net_Stop_AbstractSubStep"/>
@@ -79,52 +75,6 @@
       <eSuperTypes href="#//Steps/Petrinet_Net_Stop_AbstractSubStep"/>
       <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Place_AddToken">
-      <eOperations name="getCaller" lowerBound="1" eType="//States/petrinet/TracedPlace">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (petrinetTrace.States.petrinet.TracedPlace) this.getMseoccurrence().getMse().getCaller();"/>
-        </eAnnotations>
-      </eOperations>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_FireEnabledTransition_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
-      <eGenericSuperTypes>
-        <eTypeArguments eClassifier="//Steps/Petrinet_Place_AddToken_AbstractSubStep"/>
-        <eClassifier xsi:type="ecore:EClass" href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SequentialStep"/>
-      </eGenericSuperTypes>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Place_AddToken_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Place_RemoveToken_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_Stop_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Transition_Fire_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_InitializeModel_AbstractSubStep"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Place_AddToken_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Place_AddToken_ImplicitStep">
-      <eSuperTypes href="#//Steps/Petrinet_Place_AddToken_AbstractSubStep"/>
-      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Place_RemoveToken">
-      <eOperations name="getCaller" lowerBound="1" eType="//States/petrinet/TracedPlace">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (petrinetTrace.States.petrinet.TracedPlace) this.getMseoccurrence().getMse().getCaller();"/>
-        </eAnnotations>
-      </eOperations>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_FireEnabledTransition_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Place_AddToken_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
-      <eGenericSuperTypes>
-        <eTypeArguments eClassifier="//Steps/Petrinet_Place_RemoveToken_AbstractSubStep"/>
-        <eClassifier xsi:type="ecore:EClass" href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SequentialStep"/>
-      </eGenericSuperTypes>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Place_RemoveToken_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_Stop_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Transition_Fire_AbstractSubStep"/>
-      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_InitializeModel_AbstractSubStep"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Place_RemoveToken_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Place_RemoveToken_ImplicitStep">
-      <eSuperTypes href="#//Steps/Petrinet_Place_RemoveToken_AbstractSubStep"/>
-      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Transition_Fire">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -133,11 +83,14 @@
         <eType xsi:type="ecore:EClass" href="../../fr.inria.diverse.sample.petrinet.xpetrinet/model/XPetrinet.ecore#//Transition"/>
       </eOperations>
       <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_FireEnabledTransition_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_Stop_AbstractSubStep"/>
       <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
       <eGenericSuperTypes>
         <eTypeArguments eClassifier="//Steps/Petrinet_Transition_Fire_AbstractSubStep"/>
         <eClassifier xsi:type="ecore:EClass" href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SequentialStep"/>
       </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Transition_Fire_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Petrinet_Net_InitializeModel_AbstractSubStep"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Transition_Fire_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
     <eClassifiers xsi:type="ecore:EClass" name="Petrinet_Transition_Fire_ImplicitStep">

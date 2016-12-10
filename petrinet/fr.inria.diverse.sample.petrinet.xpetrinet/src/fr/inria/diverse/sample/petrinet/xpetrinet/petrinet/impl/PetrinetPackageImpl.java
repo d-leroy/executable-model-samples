@@ -7,10 +7,9 @@ import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetFactory;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Place;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Token;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Transition;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -67,14 +66,7 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass placeAddTokenEventEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass placeRemoveTokenEventEClass = null;
+	private EClass transitionFireEventEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -268,8 +260,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPlaceAddTokenEvent() {
-		return placeAddTokenEventEClass;
+	public EClass getTransitionFireEvent() {
+		return transitionFireEventEClass;
 	}
 
 	/**
@@ -277,26 +269,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPlaceAddTokenEvent_Place() {
-		return (EReference)placeAddTokenEventEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPlaceRemoveTokenEvent() {
-		return placeRemoveTokenEventEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPlaceRemoveTokenEvent_Place() {
-		return (EReference)placeRemoveTokenEventEClass.getEStructuralFeatures().get(0);
+	public EReference getTransitionFireEvent_Transition() {
+		return (EReference)transitionFireEventEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -346,11 +320,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		netStopEventEClass = createEClass(NET_STOP_EVENT);
 		createEReference(netStopEventEClass, NET_STOP_EVENT__NET);
 
-		placeAddTokenEventEClass = createEClass(PLACE_ADD_TOKEN_EVENT);
-		createEReference(placeAddTokenEventEClass, PLACE_ADD_TOKEN_EVENT__PLACE);
-
-		placeRemoveTokenEventEClass = createEClass(PLACE_REMOVE_TOKEN_EVENT);
-		createEReference(placeRemoveTokenEventEClass, PLACE_REMOVE_TOKEN_EVENT__PLACE);
+		transitionFireEventEClass = createEClass(TRANSITION_FIRE_EVENT);
+		createEReference(transitionFireEventEClass, TRANSITION_FIRE_EVENT__TRANSITION);
 	}
 
 	/**
@@ -405,29 +376,20 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 
 		addEOperation(transitionEClass, null, "fire", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "fire_PreCondition", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlace_Name(), ecorePackage.getEString(), "name", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlace_InitialTokens(), ecorePackage.getEInt(), "initialTokens", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlace_Tokens(), this.getToken(), null, "tokens", null, 0, -1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		addEOperation(placeEClass, null, "addToken", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(placeEClass, ecorePackage.getEBoolean(), "addToken_PreCondition", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(placeEClass, null, "removeToken", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(placeEClass, ecorePackage.getEBoolean(), "removeToken_PreCondition", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tokenEClass, Token.class, "Token", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(netStopEventEClass, NetStopEvent.class, "NetStopEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNetStopEvent_Net(), this.getNet(), null, "net", null, 0, 1, NetStopEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(placeAddTokenEventEClass, PlaceAddTokenEvent.class, "PlaceAddTokenEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlaceAddTokenEvent_Place(), this.getPlace(), null, "place", null, 0, 1, PlaceAddTokenEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(placeRemoveTokenEventEClass, PlaceRemoveTokenEvent.class, "PlaceRemoveTokenEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlaceRemoveTokenEvent_Place(), this.getPlace(), null, "place", null, 0, 1, PlaceRemoveTokenEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(transitionFireEventEClass, TransitionFireEvent.class, "TransitionFireEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransitionFireEvent_Transition(), this.getTransition(), null, "transition", null, 0, 1, TransitionFireEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -476,22 +438,7 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		   new String[] {
 		   });	
 		addAnnotation
-		  (placeEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (placeEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (placeEClass.getEOperations().get(2), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (placeEClass.getEOperations().get(3), 
+		  (transitionEClass.getEOperations().get(2), 
 		   source, 
 		   new String[] {
 		   });	

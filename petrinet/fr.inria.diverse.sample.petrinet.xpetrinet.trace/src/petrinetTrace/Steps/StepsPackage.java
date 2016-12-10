@@ -64,7 +64,7 @@ public interface StepsPackage extends EPackage {
 	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getSpecificStep()
 	 * @generated
 	 */
-	int SPECIFIC_STEP = 19;
+	int SPECIFIC_STEP = 13;
 
 	/**
 	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
@@ -544,300 +544,6 @@ public interface StepsPackage extends EPackage {
 	int PETRINET_NET_STOP_IMPLICIT_STEP_FEATURE_COUNT = PETRINET_NET_STOP_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_AddTokenImpl <em>Petrinet Place Add Token</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see petrinetTrace.Steps.impl.Petrinet_Place_AddTokenImpl
-	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_AddToken()
-	 * @generated
-	 */
-	int PETRINET_PLACE_ADD_TOKEN = 9;
-
-	/**
-	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN__MSEOCCURRENCE = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP__MSEOCCURRENCE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN__ENDING_STATE = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP__ENDING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN__STARTING_STATE = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP__STARTING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Sub Steps</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN__SUB_STEPS = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Petrinet Place Add Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_FEATURE_COUNT = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep <em>Petrinet Place Add Token Abstract Sub Step</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep
-	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_AddToken_AbstractSubStep()
-	 * @generated
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP = 10;
-
-	/**
-	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP__MSEOCCURRENCE = SPECIFIC_STEP__MSEOCCURRENCE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP__ENDING_STATE = SPECIFIC_STEP__ENDING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP__STARTING_STATE = SPECIFIC_STEP__STARTING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Petrinet Place Add Token Abstract Sub Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP_FEATURE_COUNT = SPECIFIC_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_AddToken_ImplicitStepImpl <em>Petrinet Place Add Token Implicit Step</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see petrinetTrace.Steps.impl.Petrinet_Place_AddToken_ImplicitStepImpl
-	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_AddToken_ImplicitStep()
-	 * @generated
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP = 11;
-
-	/**
-	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP__MSEOCCURRENCE = PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP__MSEOCCURRENCE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP__ENDING_STATE = PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP__ENDING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP__STARTING_STATE = PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP__STARTING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Petrinet Place Add Token Implicit Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP_FEATURE_COUNT = PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_RemoveTokenImpl <em>Petrinet Place Remove Token</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see petrinetTrace.Steps.impl.Petrinet_Place_RemoveTokenImpl
-	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_RemoveToken()
-	 * @generated
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN = 12;
-
-	/**
-	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN__MSEOCCURRENCE = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP__MSEOCCURRENCE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN__ENDING_STATE = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP__ENDING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN__STARTING_STATE = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP__STARTING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Sub Steps</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN__SUB_STEPS = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Petrinet Place Remove Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_FEATURE_COUNT = PETRINET_NET_FIRE_ENABLED_TRANSITION_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep <em>Petrinet Place Remove Token Abstract Sub Step</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep
-	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_RemoveToken_AbstractSubStep()
-	 * @generated
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP = 13;
-
-	/**
-	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP__MSEOCCURRENCE = SPECIFIC_STEP__MSEOCCURRENCE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP__ENDING_STATE = SPECIFIC_STEP__ENDING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP__STARTING_STATE = SPECIFIC_STEP__STARTING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Petrinet Place Remove Token Abstract Sub Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP_FEATURE_COUNT = SPECIFIC_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_RemoveToken_ImplicitStepImpl <em>Petrinet Place Remove Token Implicit Step</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see petrinetTrace.Steps.impl.Petrinet_Place_RemoveToken_ImplicitStepImpl
-	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_RemoveToken_ImplicitStep()
-	 * @generated
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP = 14;
-
-	/**
-	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP__MSEOCCURRENCE = PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP__MSEOCCURRENCE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP__ENDING_STATE = PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP__ENDING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP__STARTING_STATE = PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP__STARTING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Petrinet Place Remove Token Implicit Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP_FEATURE_COUNT = PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link petrinetTrace.Steps.impl.Petrinet_Transition_FireImpl <em>Petrinet Transition Fire</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -845,7 +551,7 @@ public interface StepsPackage extends EPackage {
 	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Transition_Fire()
 	 * @generated
 	 */
-	int PETRINET_TRANSITION_FIRE = 15;
+	int PETRINET_TRANSITION_FIRE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
@@ -900,7 +606,7 @@ public interface StepsPackage extends EPackage {
 	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Transition_Fire_AbstractSubStep()
 	 * @generated
 	 */
-	int PETRINET_TRANSITION_FIRE_ABSTRACT_SUB_STEP = 16;
+	int PETRINET_TRANSITION_FIRE_ABSTRACT_SUB_STEP = 10;
 
 	/**
 	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
@@ -946,7 +652,7 @@ public interface StepsPackage extends EPackage {
 	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Transition_Fire_ImplicitStep()
 	 * @generated
 	 */
-	int PETRINET_TRANSITION_FIRE_IMPLICIT_STEP = 17;
+	int PETRINET_TRANSITION_FIRE_IMPLICIT_STEP = 11;
 
 	/**
 	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
@@ -992,7 +698,7 @@ public interface StepsPackage extends EPackage {
 	 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getRootImplicitStep()
 	 * @generated
 	 */
-	int ROOT_IMPLICIT_STEP = 18;
+	int ROOT_IMPLICIT_STEP = 12;
 
 	/**
 	 * The feature id for the '<em><b>Mseoccurrence</b></em>' containment reference.
@@ -1102,66 +808,6 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPetrinet_Net_Stop_ImplicitStep();
-
-	/**
-	 * Returns the meta object for class '{@link petrinetTrace.Steps.Petrinet_Place_AddToken <em>Petrinet Place Add Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Petrinet Place Add Token</em>'.
-	 * @see petrinetTrace.Steps.Petrinet_Place_AddToken
-	 * @generated
-	 */
-	EClass getPetrinet_Place_AddToken();
-
-	/**
-	 * Returns the meta object for class '{@link petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep <em>Petrinet Place Add Token Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Petrinet Place Add Token Abstract Sub Step</em>'.
-	 * @see petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep
-	 * @generated
-	 */
-	EClass getPetrinet_Place_AddToken_AbstractSubStep();
-
-	/**
-	 * Returns the meta object for class '{@link petrinetTrace.Steps.Petrinet_Place_AddToken_ImplicitStep <em>Petrinet Place Add Token Implicit Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Petrinet Place Add Token Implicit Step</em>'.
-	 * @see petrinetTrace.Steps.Petrinet_Place_AddToken_ImplicitStep
-	 * @generated
-	 */
-	EClass getPetrinet_Place_AddToken_ImplicitStep();
-
-	/**
-	 * Returns the meta object for class '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken <em>Petrinet Place Remove Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Petrinet Place Remove Token</em>'.
-	 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken
-	 * @generated
-	 */
-	EClass getPetrinet_Place_RemoveToken();
-
-	/**
-	 * Returns the meta object for class '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep <em>Petrinet Place Remove Token Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Petrinet Place Remove Token Abstract Sub Step</em>'.
-	 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep
-	 * @generated
-	 */
-	EClass getPetrinet_Place_RemoveToken_AbstractSubStep();
-
-	/**
-	 * Returns the meta object for class '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken_ImplicitStep <em>Petrinet Place Remove Token Implicit Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Petrinet Place Remove Token Implicit Step</em>'.
-	 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken_ImplicitStep
-	 * @generated
-	 */
-	EClass getPetrinet_Place_RemoveToken_ImplicitStep();
 
 	/**
 	 * Returns the meta object for class '{@link petrinetTrace.Steps.Petrinet_Transition_Fire <em>Petrinet Transition Fire</em>}'.
@@ -1346,66 +992,6 @@ public interface StepsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PETRINET_NET_STOP_IMPLICIT_STEP = eINSTANCE.getPetrinet_Net_Stop_ImplicitStep();
-
-		/**
-		 * The meta object literal for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_AddTokenImpl <em>Petrinet Place Add Token</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see petrinetTrace.Steps.impl.Petrinet_Place_AddTokenImpl
-		 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_AddToken()
-		 * @generated
-		 */
-		EClass PETRINET_PLACE_ADD_TOKEN = eINSTANCE.getPetrinet_Place_AddToken();
-
-		/**
-		 * The meta object literal for the '{@link petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep <em>Petrinet Place Add Token Abstract Sub Step</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep
-		 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_AddToken_AbstractSubStep()
-		 * @generated
-		 */
-		EClass PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP = eINSTANCE.getPetrinet_Place_AddToken_AbstractSubStep();
-
-		/**
-		 * The meta object literal for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_AddToken_ImplicitStepImpl <em>Petrinet Place Add Token Implicit Step</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see petrinetTrace.Steps.impl.Petrinet_Place_AddToken_ImplicitStepImpl
-		 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_AddToken_ImplicitStep()
-		 * @generated
-		 */
-		EClass PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP = eINSTANCE.getPetrinet_Place_AddToken_ImplicitStep();
-
-		/**
-		 * The meta object literal for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_RemoveTokenImpl <em>Petrinet Place Remove Token</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see petrinetTrace.Steps.impl.Petrinet_Place_RemoveTokenImpl
-		 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_RemoveToken()
-		 * @generated
-		 */
-		EClass PETRINET_PLACE_REMOVE_TOKEN = eINSTANCE.getPetrinet_Place_RemoveToken();
-
-		/**
-		 * The meta object literal for the '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep <em>Petrinet Place Remove Token Abstract Sub Step</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep
-		 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_RemoveToken_AbstractSubStep()
-		 * @generated
-		 */
-		EClass PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP = eINSTANCE.getPetrinet_Place_RemoveToken_AbstractSubStep();
-
-		/**
-		 * The meta object literal for the '{@link petrinetTrace.Steps.impl.Petrinet_Place_RemoveToken_ImplicitStepImpl <em>Petrinet Place Remove Token Implicit Step</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see petrinetTrace.Steps.impl.Petrinet_Place_RemoveToken_ImplicitStepImpl
-		 * @see petrinetTrace.Steps.impl.StepsPackageImpl#getPetrinet_Place_RemoveToken_ImplicitStep()
-		 * @generated
-		 */
-		EClass PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP = eINSTANCE.getPetrinet_Place_RemoveToken_ImplicitStep();
 
 		/**
 		 * The meta object literal for the '{@link petrinetTrace.Steps.impl.Petrinet_Transition_FireImpl <em>Petrinet Transition Fire</em>}' class.

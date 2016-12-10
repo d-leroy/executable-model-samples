@@ -96,15 +96,9 @@ public class PetrinetSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PetrinetPackage.PLACE_ADD_TOKEN_EVENT: {
-				PlaceAddTokenEvent placeAddTokenEvent = (PlaceAddTokenEvent)theEObject;
-				T result = casePlaceAddTokenEvent(placeAddTokenEvent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT: {
-				PlaceRemoveTokenEvent placeRemoveTokenEvent = (PlaceRemoveTokenEvent)theEObject;
-				T result = casePlaceRemoveTokenEvent(placeRemoveTokenEvent);
+			case PetrinetPackage.TRANSITION_FIRE_EVENT: {
+				TransitionFireEvent transitionFireEvent = (TransitionFireEvent)theEObject;
+				T result = caseTransitionFireEvent(transitionFireEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -188,32 +182,17 @@ public class PetrinetSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Place Add Token Event</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Transition Fire Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Place Add Token Event</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Transition Fire Event</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePlaceAddTokenEvent(PlaceAddTokenEvent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Place Remove Token Event</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Place Remove Token Event</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePlaceRemoveTokenEvent(PlaceRemoveTokenEvent object) {
+	public T caseTransitionFireEvent(TransitionFireEvent object) {
 		return null;
 	}
 

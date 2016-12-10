@@ -112,31 +112,13 @@ public interface PetrinetTracePackage extends EPackage {
 	int SPECIFIC_TRACE__PETRINET_NET_STOP_SEQUENCE = TracePackage.TRACE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Petrinet Place Add Token Sequence</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE = TracePackage.TRACE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Petrinet Place Remove Token Sequence</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE = TracePackage.TRACE_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Petrinet Transition Fire Sequence</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE = TracePackage.TRACE_FEATURE_COUNT + 5;
+	int SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE = TracePackage.TRACE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Petrinet traced Places</b></em>' containment reference list.
@@ -145,7 +127,7 @@ public interface PetrinetTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__PETRINET_TRACED_PLACES = TracePackage.TRACE_FEATURE_COUNT + 6;
+	int SPECIFIC_TRACE__PETRINET_TRACED_PLACES = TracePackage.TRACE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Petrinet traced Tokens</b></em>' containment reference list.
@@ -154,7 +136,7 @@ public interface PetrinetTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__PETRINET_TRACED_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 7;
+	int SPECIFIC_TRACE__PETRINET_TRACED_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>States Trace</b></em>' containment reference list.
@@ -163,7 +145,7 @@ public interface PetrinetTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__STATES_TRACE = TracePackage.TRACE_FEATURE_COUNT + 8;
+	int SPECIFIC_TRACE__STATES_TRACE = TracePackage.TRACE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Specific Trace</em>' class.
@@ -172,7 +154,7 @@ public interface PetrinetTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE_FEATURE_COUNT = TracePackage.TRACE_FEATURE_COUNT + 9;
+	int SPECIFIC_TRACE_FEATURE_COUNT = TracePackage.TRACE_FEATURE_COUNT + 7;
 
 
 	/**
@@ -217,28 +199,6 @@ public interface PetrinetTracePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecificTrace_Petrinet_Net_Stop_Sequence();
-
-	/**
-	 * Returns the meta object for the reference list '{@link petrinetTrace.SpecificTrace#getPetrinet_Place_AddToken_Sequence <em>Petrinet Place Add Token Sequence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Petrinet Place Add Token Sequence</em>'.
-	 * @see petrinetTrace.SpecificTrace#getPetrinet_Place_AddToken_Sequence()
-	 * @see #getSpecificTrace()
-	 * @generated
-	 */
-	EReference getSpecificTrace_Petrinet_Place_AddToken_Sequence();
-
-	/**
-	 * Returns the meta object for the reference list '{@link petrinetTrace.SpecificTrace#getPetrinet_Place_RemoveToken_Sequence <em>Petrinet Place Remove Token Sequence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Petrinet Place Remove Token Sequence</em>'.
-	 * @see petrinetTrace.SpecificTrace#getPetrinet_Place_RemoveToken_Sequence()
-	 * @see #getSpecificTrace()
-	 * @generated
-	 */
-	EReference getSpecificTrace_Petrinet_Place_RemoveToken_Sequence();
 
 	/**
 	 * Returns the meta object for the reference list '{@link petrinetTrace.SpecificTrace#getPetrinet_Transition_Fire_Sequence <em>Petrinet Transition Fire Sequence</em>}'.
@@ -339,22 +299,6 @@ public interface PetrinetTracePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFIC_TRACE__PETRINET_NET_STOP_SEQUENCE = eINSTANCE.getSpecificTrace_Petrinet_Net_Stop_Sequence();
-
-		/**
-		 * The meta object literal for the '<em><b>Petrinet Place Add Token Sequence</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE = eINSTANCE.getSpecificTrace_Petrinet_Place_AddToken_Sequence();
-
-		/**
-		 * The meta object literal for the '<em><b>Petrinet Place Remove Token Sequence</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE = eINSTANCE.getSpecificTrace_Petrinet_Place_RemoveToken_Sequence();
 
 		/**
 		 * The meta object literal for the '<em><b>Petrinet Transition Fire Sequence</b></em>' reference list feature.

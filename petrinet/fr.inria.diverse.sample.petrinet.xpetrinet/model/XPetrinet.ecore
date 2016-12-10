@@ -27,6 +27,10 @@
     <eOperations name="fire">
       <eAnnotations source="aspect"/>
     </eOperations>
+    <eOperations name="fire_PreCondition">
+      <eAnnotations source="aspect"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" upperBound="-1" eType="//Place"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1" upperBound="-1" eType="//Place"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name">
@@ -34,20 +38,6 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Place">
-    <eOperations name="addToken">
-      <eAnnotations source="aspect"/>
-    </eOperations>
-    <eOperations name="addToken_PreCondition">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    </eOperations>
-    <eOperations name="removeToken">
-      <eAnnotations source="aspect"/>
-    </eOperations>
-    <eOperations name="removeToken_PreCondition">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
@@ -64,10 +54,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="NetStopEvent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="net" eType="//Net"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PlaceAddTokenEvent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="place" eType="//Place"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PlaceRemoveTokenEvent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="place" eType="//Place"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TransitionFireEvent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" eType="//Transition"/>
   </eClassifiers>
 </ecore:EPackage>

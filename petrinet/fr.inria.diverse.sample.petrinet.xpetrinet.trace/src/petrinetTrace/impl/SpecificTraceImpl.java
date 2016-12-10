@@ -30,8 +30,6 @@ import petrinetTrace.States.petrinet.TracedToken;
 import petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition;
 import petrinetTrace.Steps.Petrinet_Net_InitializeModel;
 import petrinetTrace.Steps.Petrinet_Net_Stop;
-import petrinetTrace.Steps.Petrinet_Place_AddToken;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken;
 import petrinetTrace.Steps.Petrinet_Transition_Fire;
 import petrinetTrace.Steps.SpecificStep;
 
@@ -46,8 +44,6 @@ import petrinetTrace.Steps.SpecificStep;
  *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_Net_FireEnabledTransition_Sequence <em>Petrinet Net Fire Enabled Transition Sequence</em>}</li>
  *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_Net_InitializeModel_Sequence <em>Petrinet Net Initialize Model Sequence</em>}</li>
  *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_Net_Stop_Sequence <em>Petrinet Net Stop Sequence</em>}</li>
- *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_Place_AddToken_Sequence <em>Petrinet Place Add Token Sequence</em>}</li>
- *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_Place_RemoveToken_Sequence <em>Petrinet Place Remove Token Sequence</em>}</li>
  *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_Transition_Fire_Sequence <em>Petrinet Transition Fire Sequence</em>}</li>
  *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_tracedPlaces <em>Petrinet traced Places</em>}</li>
  *   <li>{@link petrinetTrace.impl.SpecificTraceImpl#getPetrinet_tracedTokens <em>Petrinet traced Tokens</em>}</li>
@@ -86,26 +82,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	 * @ordered
 	 */
 	protected EList<Petrinet_Net_Stop> petrinet_Net_Stop_Sequence;
-
-	/**
-	 * The cached value of the '{@link #getPetrinet_Place_AddToken_Sequence() <em>Petrinet Place Add Token Sequence</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPetrinet_Place_AddToken_Sequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Petrinet_Place_AddToken> petrinet_Place_AddToken_Sequence;
-
-	/**
-	 * The cached value of the '{@link #getPetrinet_Place_RemoveToken_Sequence() <em>Petrinet Place Remove Token Sequence</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPetrinet_Place_RemoveToken_Sequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Petrinet_Place_RemoveToken> petrinet_Place_RemoveToken_Sequence;
 
 	/**
 	 * The cached value of the '{@link #getPetrinet_Transition_Fire_Sequence() <em>Petrinet Transition Fire Sequence</em>}' reference list.
@@ -218,30 +194,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Petrinet_Place_AddToken> getPetrinet_Place_AddToken_Sequence() {
-		if (petrinet_Place_AddToken_Sequence == null) {
-			petrinet_Place_AddToken_Sequence = new EObjectResolvingEList<Petrinet_Place_AddToken>(Petrinet_Place_AddToken.class, this, PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE);
-		}
-		return petrinet_Place_AddToken_Sequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Petrinet_Place_RemoveToken> getPetrinet_Place_RemoveToken_Sequence() {
-		if (petrinet_Place_RemoveToken_Sequence == null) {
-			petrinet_Place_RemoveToken_Sequence = new EObjectResolvingEList<Petrinet_Place_RemoveToken>(Petrinet_Place_RemoveToken.class, this, PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE);
-		}
-		return petrinet_Place_RemoveToken_Sequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Petrinet_Transition_Fire> getPetrinet_Transition_Fire_Sequence() {
 		if (petrinet_Transition_Fire_Sequence == null) {
 			petrinet_Transition_Fire_Sequence = new EObjectResolvingEList<Petrinet_Transition_Fire>(Petrinet_Transition_Fire.class, this, PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE);
@@ -317,10 +269,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return getPetrinet_Net_InitializeModel_Sequence();
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_NET_STOP_SEQUENCE:
 				return getPetrinet_Net_Stop_Sequence();
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE:
-				return getPetrinet_Place_AddToken_Sequence();
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE:
-				return getPetrinet_Place_RemoveToken_Sequence();
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE:
 				return getPetrinet_Transition_Fire_Sequence();
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_TRACED_PLACES:
@@ -353,14 +301,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_NET_STOP_SEQUENCE:
 				getPetrinet_Net_Stop_Sequence().clear();
 				getPetrinet_Net_Stop_Sequence().addAll((Collection<? extends Petrinet_Net_Stop>)newValue);
-				return;
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE:
-				getPetrinet_Place_AddToken_Sequence().clear();
-				getPetrinet_Place_AddToken_Sequence().addAll((Collection<? extends Petrinet_Place_AddToken>)newValue);
-				return;
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE:
-				getPetrinet_Place_RemoveToken_Sequence().clear();
-				getPetrinet_Place_RemoveToken_Sequence().addAll((Collection<? extends Petrinet_Place_RemoveToken>)newValue);
 				return;
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE:
 				getPetrinet_Transition_Fire_Sequence().clear();
@@ -399,12 +339,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_NET_STOP_SEQUENCE:
 				getPetrinet_Net_Stop_Sequence().clear();
 				return;
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE:
-				getPetrinet_Place_AddToken_Sequence().clear();
-				return;
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE:
-				getPetrinet_Place_RemoveToken_Sequence().clear();
-				return;
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE:
 				getPetrinet_Transition_Fire_Sequence().clear();
 				return;
@@ -435,10 +369,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return petrinet_Net_InitializeModel_Sequence != null && !petrinet_Net_InitializeModel_Sequence.isEmpty();
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_NET_STOP_SEQUENCE:
 				return petrinet_Net_Stop_Sequence != null && !petrinet_Net_Stop_Sequence.isEmpty();
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_ADD_TOKEN_SEQUENCE:
-				return petrinet_Place_AddToken_Sequence != null && !petrinet_Place_AddToken_Sequence.isEmpty();
-			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_PLACE_REMOVE_TOKEN_SEQUENCE:
-				return petrinet_Place_RemoveToken_Sequence != null && !petrinet_Place_RemoveToken_Sequence.isEmpty();
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_TRANSITION_FIRE_SEQUENCE:
 				return petrinet_Transition_Fire_Sequence != null && !petrinet_Transition_Fire_Sequence.isEmpty();
 			case PetrinetTracePackage.SPECIFIC_TRACE__PETRINET_TRACED_PLACES:

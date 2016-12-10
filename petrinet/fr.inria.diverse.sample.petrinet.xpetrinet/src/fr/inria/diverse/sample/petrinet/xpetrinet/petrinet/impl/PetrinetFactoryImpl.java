@@ -61,8 +61,7 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 			case PetrinetPackage.PLACE: return createPlace();
 			case PetrinetPackage.TOKEN: return createToken();
 			case PetrinetPackage.NET_STOP_EVENT: return createNetStopEvent();
-			case PetrinetPackage.PLACE_ADD_TOKEN_EVENT: return createPlaceAddTokenEvent();
-			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT: return createPlaceRemoveTokenEvent();
+			case PetrinetPackage.TRANSITION_FIRE_EVENT: return createTransitionFireEvent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -123,19 +122,9 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PlaceAddTokenEvent createPlaceAddTokenEvent() {
-		PlaceAddTokenEventImpl placeAddTokenEvent = new PlaceAddTokenEventImpl();
-		return placeAddTokenEvent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PlaceRemoveTokenEvent createPlaceRemoveTokenEvent() {
-		PlaceRemoveTokenEventImpl placeRemoveTokenEvent = new PlaceRemoveTokenEventImpl();
-		return placeRemoveTokenEvent;
+	public TransitionFireEvent createTransitionFireEvent() {
+		TransitionFireEventImpl transitionFireEvent = new TransitionFireEventImpl();
+		return transitionFireEvent;
 	}
 
 	/**

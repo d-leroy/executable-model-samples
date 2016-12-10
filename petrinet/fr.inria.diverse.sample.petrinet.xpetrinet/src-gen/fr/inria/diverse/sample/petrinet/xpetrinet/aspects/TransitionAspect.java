@@ -31,7 +31,7 @@ public class TransitionAspect {
   /**
    * Transformation rule that fires the Transition.
    */
-  @Step
+  @Step(eventTriggerable = true)
   public static void fire(final Transition _self) {
 	final fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspectTransitionAspectProperties _self_ = fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspectTransitionAspectContext
 			.getSelf(_self);
@@ -47,7 +47,7 @@ public class TransitionAspect {
 		manager.executeStep(_self, command, "Transition", "fire");
 	} else {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager();
+				.getInstance().findEventManager(null);
 		if (eventManager != null) {
 			eventManager.manageEvents();
 		}
@@ -55,6 +55,15 @@ public class TransitionAspect {
 	}
 	;
 	;
+}
+  
+  public static boolean fire_PreCondition(final Transition _self) {
+	final fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspectTransitionAspectProperties _self_ = fr.inria.diverse.sample.petrinet.xpetrinet.aspects.TransitionAspectTransitionAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_fire_PreCondition(_self_, _self);
+	;
+	return (boolean) result;
 }
   
   protected static boolean _privk3_isEnabled(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
@@ -84,5 +93,15 @@ public class TransitionAspect {
         _kens_2.add(_createToken);
       }
     }
+  }
+  
+  protected static boolean _privk3_fire_PreCondition(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
+    EList<Place> _input = _self.getInput();
+    final Function1<Place, Boolean> _function = (Place place) -> {
+      EList<Token> _kens = PlaceAspect.tokens(place);
+      int _size = _kens.size();
+      return Boolean.valueOf((_size > 0));
+    };
+    return IterableExtensions.<Place>forall(_input, _function);
   }
 }

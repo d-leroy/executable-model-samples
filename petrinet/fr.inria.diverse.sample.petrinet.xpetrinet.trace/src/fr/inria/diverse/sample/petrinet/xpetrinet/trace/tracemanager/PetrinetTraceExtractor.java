@@ -545,8 +545,6 @@ public class PetrinetTraceExtractor implements ITraceExtractor {
 			return !(s instanceof petrinetTrace.Steps.Petrinet_Net_FireEnabledTransition_ImplicitStep
 					|| s instanceof petrinetTrace.Steps.Petrinet_Net_InitializeModel_ImplicitStep
 					|| s instanceof petrinetTrace.Steps.Petrinet_Net_Stop_ImplicitStep
-					|| s instanceof petrinetTrace.Steps.Petrinet_Place_AddToken_ImplicitStep
-					|| s instanceof petrinetTrace.Steps.Petrinet_Place_RemoveToken_ImplicitStep
 					|| s instanceof petrinetTrace.Steps.Petrinet_Transition_Fire_ImplicitStep);
 		}
 		return true;

@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceRemoveTokenEvent#getPlace <em>Place</em>}</li>
+ *   <li>{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceRemoveTokenEvent#getRemoveTokenParameter <em>Remove Token Parameter</em>}</li>
  * </ul>
  *
  * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PetrinetPackage#getPlaceRemoveTokenEvent()
@@ -46,5 +47,31 @@ public interface PlaceRemoveTokenEvent extends EObject {
 	 * @generated
 	 */
 	void setPlace(Place value);
+
+	/**
+	 * Returns the value of the '<em><b>Remove Token Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Remove Token Parameter</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Remove Token Parameter</em>' reference.
+	 * @see #setRemoveTokenParameter(RemoveTokenParameter)
+	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PetrinetPackage#getPlaceRemoveTokenEvent_RemoveTokenParameter()
+	 * @model
+	 * @generated
+	 */
+	RemoveTokenParameter getRemoveTokenParameter();
+
+	/**
+	 * Sets the value of the '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceRemoveTokenEvent#getRemoveTokenParameter <em>Remove Token Parameter</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Remove Token Parameter</em>' reference.
+	 * @see #getRemoveTokenParameter()
+	 * @generated
+	 */
+	void setRemoveTokenParameter(RemoveTokenParameter value);
 
 } // PlaceRemoveTokenEvent

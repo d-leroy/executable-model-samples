@@ -5,17 +5,15 @@ import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.NetAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.NetStopEventAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceAdapter;
-import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceAddTokenEventAdapter;
-import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceRemoveTokenEventAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TokenAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TransitionAdapter;
+import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TransitionFireEventAdapter;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Net;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Place;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Token;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Transition;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent;
 import java.util.WeakHashMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -53,11 +51,8 @@ public class PetrinetMTAdaptersFactory implements AdaptersFactory {
     if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent){
     	return createNetStopEventAdapter((fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent) o, res);
     }
-    if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent){
-    	return createPlaceAddTokenEventAdapter((fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent) o, res);
-    }
-    if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent){
-    	return createPlaceRemoveTokenEventAdapter((fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent) o, res);
+    if (o instanceof fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent){
+    	return createTransitionFireEventAdapter((fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent) o, res);
     }
     
     return null;
@@ -138,33 +133,18 @@ public class PetrinetMTAdaptersFactory implements AdaptersFactory {
     }
   }
   
-  public PlaceAddTokenEventAdapter createPlaceAddTokenEventAdapter(final PlaceAddTokenEvent adaptee, final Resource res) {
+  public TransitionFireEventAdapter createTransitionFireEventAdapter(final TransitionFireEvent adaptee, final Resource res) {
     if (adaptee == null)
     	return null;
     EObjectAdapter adapter = register.get(adaptee);
     if(adapter != null)
-    	 return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceAddTokenEventAdapter) adapter;
+    	 return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TransitionFireEventAdapter) adapter;
     else {
-    	adapter = new fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceAddTokenEventAdapter();
+    	adapter = new fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TransitionFireEventAdapter();
     	adapter.setAdaptee(adaptee);
     	adapter.setResource(res);
     	register.put(adaptee, adapter);
-    	return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceAddTokenEventAdapter) adapter;
-    }
-  }
-  
-  public PlaceRemoveTokenEventAdapter createPlaceRemoveTokenEventAdapter(final PlaceRemoveTokenEvent adaptee, final Resource res) {
-    if (adaptee == null)
-    	return null;
-    EObjectAdapter adapter = register.get(adaptee);
-    if(adapter != null)
-    	 return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceRemoveTokenEventAdapter) adapter;
-    else {
-    	adapter = new fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceRemoveTokenEventAdapter();
-    	adapter.setAdaptee(adaptee);
-    	adapter.setResource(res);
-    	register.put(adaptee, adapter);
-    	return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.PlaceRemoveTokenEventAdapter) adapter;
+    	return (fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.petrinet.TransitionFireEventAdapter) adapter;
     }
   }
 }

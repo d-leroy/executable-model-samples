@@ -99,4 +99,12 @@ public interface Transition extends EObject {
 	 */
 	void fire();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean fire_PreCondition();
+
 } // Transition

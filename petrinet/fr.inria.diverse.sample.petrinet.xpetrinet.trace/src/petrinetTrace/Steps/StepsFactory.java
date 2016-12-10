@@ -76,42 +76,6 @@ public interface StepsFactory extends EFactory {
 	Petrinet_Net_Stop_ImplicitStep createPetrinet_Net_Stop_ImplicitStep();
 
 	/**
-	 * Returns a new object of class '<em>Petrinet Place Add Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Petrinet Place Add Token</em>'.
-	 * @generated
-	 */
-	Petrinet_Place_AddToken createPetrinet_Place_AddToken();
-
-	/**
-	 * Returns a new object of class '<em>Petrinet Place Add Token Implicit Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Petrinet Place Add Token Implicit Step</em>'.
-	 * @generated
-	 */
-	Petrinet_Place_AddToken_ImplicitStep createPetrinet_Place_AddToken_ImplicitStep();
-
-	/**
-	 * Returns a new object of class '<em>Petrinet Place Remove Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Petrinet Place Remove Token</em>'.
-	 * @generated
-	 */
-	Petrinet_Place_RemoveToken createPetrinet_Place_RemoveToken();
-
-	/**
-	 * Returns a new object of class '<em>Petrinet Place Remove Token Implicit Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Petrinet Place Remove Token Implicit Step</em>'.
-	 * @generated
-	 */
-	Petrinet_Place_RemoveToken_ImplicitStep createPetrinet_Place_RemoveToken_ImplicitStep();
-
-	/**
 	 * Returns a new object of class '<em>Petrinet Transition Fire</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

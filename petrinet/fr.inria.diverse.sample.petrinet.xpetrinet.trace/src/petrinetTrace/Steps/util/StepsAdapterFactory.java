@@ -109,30 +109,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 				return createPetrinet_Net_Stop_ImplicitStepAdapter();
 			}
 			@Override
-			public Adapter casePetrinet_Place_AddToken(Petrinet_Place_AddToken object) {
-				return createPetrinet_Place_AddTokenAdapter();
-			}
-			@Override
-			public Adapter casePetrinet_Place_AddToken_AbstractSubStep(Petrinet_Place_AddToken_AbstractSubStep object) {
-				return createPetrinet_Place_AddToken_AbstractSubStepAdapter();
-			}
-			@Override
-			public Adapter casePetrinet_Place_AddToken_ImplicitStep(Petrinet_Place_AddToken_ImplicitStep object) {
-				return createPetrinet_Place_AddToken_ImplicitStepAdapter();
-			}
-			@Override
-			public Adapter casePetrinet_Place_RemoveToken(Petrinet_Place_RemoveToken object) {
-				return createPetrinet_Place_RemoveTokenAdapter();
-			}
-			@Override
-			public Adapter casePetrinet_Place_RemoveToken_AbstractSubStep(Petrinet_Place_RemoveToken_AbstractSubStep object) {
-				return createPetrinet_Place_RemoveToken_AbstractSubStepAdapter();
-			}
-			@Override
-			public Adapter casePetrinet_Place_RemoveToken_ImplicitStep(Petrinet_Place_RemoveToken_ImplicitStep object) {
-				return createPetrinet_Place_RemoveToken_ImplicitStepAdapter();
-			}
-			@Override
 			public Adapter casePetrinet_Transition_Fire(Petrinet_Transition_Fire object) {
 				return createPetrinet_Transition_FireAdapter();
 			}
@@ -311,90 +287,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPetrinet_Net_Stop_ImplicitStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Place_AddToken <em>Petrinet Place Add Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Place_AddToken
-	 * @generated
-	 */
-	public Adapter createPetrinet_Place_AddTokenAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep <em>Petrinet Place Add Token Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep
-	 * @generated
-	 */
-	public Adapter createPetrinet_Place_AddToken_AbstractSubStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Place_AddToken_ImplicitStep <em>Petrinet Place Add Token Implicit Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Place_AddToken_ImplicitStep
-	 * @generated
-	 */
-	public Adapter createPetrinet_Place_AddToken_ImplicitStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken <em>Petrinet Place Remove Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken
-	 * @generated
-	 */
-	public Adapter createPetrinet_Place_RemoveTokenAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep <em>Petrinet Place Remove Token Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep
-	 * @generated
-	 */
-	public Adapter createPetrinet_Place_RemoveToken_AbstractSubStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link petrinetTrace.Steps.Petrinet_Place_RemoveToken_ImplicitStep <em>Petrinet Place Remove Token Implicit Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see petrinetTrace.Steps.Petrinet_Place_RemoveToken_ImplicitStep
-	 * @generated
-	 */
-	public Adapter createPetrinet_Place_RemoveToken_ImplicitStepAdapter() {
 		return null;
 	}
 

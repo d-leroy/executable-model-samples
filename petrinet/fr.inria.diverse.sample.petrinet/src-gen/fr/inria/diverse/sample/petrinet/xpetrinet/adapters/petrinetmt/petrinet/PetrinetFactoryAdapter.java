@@ -5,10 +5,9 @@ import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.NetStopEvent;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PetrinetFactory;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PetrinetPackage;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.Place;
-import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceAddTokenEvent;
-import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceRemoveTokenEvent;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.Token;
 import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.Transition;
+import fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.TransitionFireEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.adapters.petrinetmt.PetrinetMTAdaptersFactory;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
@@ -45,13 +44,8 @@ public class PetrinetFactoryAdapter extends EFactoryImpl implements PetrinetFact
   }
   
   @Override
-  public PlaceAddTokenEvent createPlaceAddTokenEvent() {
-    return adaptersFactory.createPlaceAddTokenEventAdapter(petrinetAdaptee.createPlaceAddTokenEvent(), null);
-  }
-  
-  @Override
-  public PlaceRemoveTokenEvent createPlaceRemoveTokenEvent() {
-    return adaptersFactory.createPlaceRemoveTokenEventAdapter(petrinetAdaptee.createPlaceRemoveTokenEvent(), null);
+  public TransitionFireEvent createTransitionFireEvent() {
+    return adaptersFactory.createTransitionFireEventAdapter(petrinetAdaptee.createTransitionFireEvent(), null);
   }
   
   @Override

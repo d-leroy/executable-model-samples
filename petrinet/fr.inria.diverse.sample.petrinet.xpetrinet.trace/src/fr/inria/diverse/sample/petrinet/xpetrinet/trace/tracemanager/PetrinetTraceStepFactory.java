@@ -39,22 +39,6 @@ public class PetrinetTraceStepFactory implements IStepFactory {
 			step = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Net_Stop();
 		} else
 
-		if (mse.getAction().getName().equalsIgnoreCase("addToken")
-				&& (ec.getClassifierID() == fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage.eINSTANCE
-						.getPlace().getClassifierID()))
-
-		{
-			step = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Place_AddToken();
-		} else
-
-		if (mse.getAction().getName().equalsIgnoreCase("removeToken")
-				&& (ec.getClassifierID() == fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage.eINSTANCE
-						.getPlace().getClassifierID()))
-
-		{
-			step = petrinetTrace.Steps.StepsFactory.eINSTANCE.createPetrinet_Place_RemoveToken();
-		} else
-
 		if (mse.getAction().getName().equalsIgnoreCase("fire")
 				&& (ec.getClassifierID() == fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage.eINSTANCE
 						.getTransition().getClassifierID()))

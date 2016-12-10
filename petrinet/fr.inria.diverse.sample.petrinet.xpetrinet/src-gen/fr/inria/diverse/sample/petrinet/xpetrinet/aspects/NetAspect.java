@@ -37,7 +37,7 @@ public class NetAspect {
     if (stepManager != null) {
     	stepManager.executeStep(_self,command,"Net","initializeModel");
     } else {
-    	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry.getInstance().findEventManager();
+    	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry.getInstance().findEventManager(_self);
     	if (eventManager != null) {
     		eventManager.manageEvents();
     	}
@@ -73,7 +73,7 @@ public class NetAspect {
 		manager.executeStep(_self, command, "Net", "fireEnabledTransition");
 	} else {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager();
+				.getInstance().findEventManager(null);
 		if (eventManager != null) {
 			eventManager.manageEvents();
 		}
@@ -99,7 +99,7 @@ public class NetAspect {
 		manager.executeStep(_self, command, "Net", "stop");
 	} else {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager();
+				.getInstance().findEventManager(null);
 		if (eventManager != null) {
 			eventManager.manageEvents();
 		}

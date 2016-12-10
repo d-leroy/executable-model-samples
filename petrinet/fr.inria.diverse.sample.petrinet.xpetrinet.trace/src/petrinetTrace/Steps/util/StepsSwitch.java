@@ -131,8 +131,6 @@ public class StepsSwitch<T> extends Switch<T> {
 				Petrinet_Net_Stop petrinet_Net_Stop = (Petrinet_Net_Stop)theEObject;
 				T result = casePetrinet_Net_Stop(petrinet_Net_Stop);
 				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Net_Stop);
-				if (result == null) result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Net_Stop);
-				if (result == null) result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Net_Stop);
 				if (result == null) result = caseSequentialStep(petrinet_Net_Stop);
 				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Net_Stop);
 				if (result == null) result = casePetrinet_Transition_Fire_AbstractSubStep(petrinet_Net_Stop);
@@ -161,79 +159,14 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.PETRINET_PLACE_ADD_TOKEN: {
-				Petrinet_Place_AddToken petrinet_Place_AddToken = (Petrinet_Place_AddToken)theEObject;
-				T result = casePetrinet_Place_AddToken(petrinet_Place_AddToken);
-				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Place_AddToken);
-				if (result == null) result = caseSequentialStep(petrinet_Place_AddToken);
-				if (result == null) result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Place_AddToken);
-				if (result == null) result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Place_AddToken);
-				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Place_AddToken);
-				if (result == null) result = casePetrinet_Transition_Fire_AbstractSubStep(petrinet_Place_AddToken);
-				if (result == null) result = casePetrinet_Net_InitializeModel_AbstractSubStep(petrinet_Place_AddToken);
-				if (result == null) result = caseSpecificStep(petrinet_Place_AddToken);
-				if (result == null) result = caseBigStep(petrinet_Place_AddToken);
-				if (result == null) result = caseStep(petrinet_Place_AddToken);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.PETRINET_PLACE_ADD_TOKEN_ABSTRACT_SUB_STEP: {
-				Petrinet_Place_AddToken_AbstractSubStep petrinet_Place_AddToken_AbstractSubStep = (Petrinet_Place_AddToken_AbstractSubStep)theEObject;
-				T result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Place_AddToken_AbstractSubStep);
-				if (result == null) result = caseSpecificStep(petrinet_Place_AddToken_AbstractSubStep);
-				if (result == null) result = caseStep(petrinet_Place_AddToken_AbstractSubStep);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.PETRINET_PLACE_ADD_TOKEN_IMPLICIT_STEP: {
-				Petrinet_Place_AddToken_ImplicitStep petrinet_Place_AddToken_ImplicitStep = (Petrinet_Place_AddToken_ImplicitStep)theEObject;
-				T result = casePetrinet_Place_AddToken_ImplicitStep(petrinet_Place_AddToken_ImplicitStep);
-				if (result == null) result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Place_AddToken_ImplicitStep);
-				if (result == null) result = caseSmallStep(petrinet_Place_AddToken_ImplicitStep);
-				if (result == null) result = caseSpecificStep(petrinet_Place_AddToken_ImplicitStep);
-				if (result == null) result = caseStep(petrinet_Place_AddToken_ImplicitStep);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN: {
-				Petrinet_Place_RemoveToken petrinet_Place_RemoveToken = (Petrinet_Place_RemoveToken)theEObject;
-				T result = casePetrinet_Place_RemoveToken(petrinet_Place_RemoveToken);
-				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Place_RemoveToken);
-				if (result == null) result = casePetrinet_Place_AddToken_AbstractSubStep(petrinet_Place_RemoveToken);
-				if (result == null) result = caseSequentialStep(petrinet_Place_RemoveToken);
-				if (result == null) result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Place_RemoveToken);
-				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Place_RemoveToken);
-				if (result == null) result = casePetrinet_Transition_Fire_AbstractSubStep(petrinet_Place_RemoveToken);
-				if (result == null) result = casePetrinet_Net_InitializeModel_AbstractSubStep(petrinet_Place_RemoveToken);
-				if (result == null) result = caseSpecificStep(petrinet_Place_RemoveToken);
-				if (result == null) result = caseBigStep(petrinet_Place_RemoveToken);
-				if (result == null) result = caseStep(petrinet_Place_RemoveToken);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN_ABSTRACT_SUB_STEP: {
-				Petrinet_Place_RemoveToken_AbstractSubStep petrinet_Place_RemoveToken_AbstractSubStep = (Petrinet_Place_RemoveToken_AbstractSubStep)theEObject;
-				T result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Place_RemoveToken_AbstractSubStep);
-				if (result == null) result = caseSpecificStep(petrinet_Place_RemoveToken_AbstractSubStep);
-				if (result == null) result = caseStep(petrinet_Place_RemoveToken_AbstractSubStep);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.PETRINET_PLACE_REMOVE_TOKEN_IMPLICIT_STEP: {
-				Petrinet_Place_RemoveToken_ImplicitStep petrinet_Place_RemoveToken_ImplicitStep = (Petrinet_Place_RemoveToken_ImplicitStep)theEObject;
-				T result = casePetrinet_Place_RemoveToken_ImplicitStep(petrinet_Place_RemoveToken_ImplicitStep);
-				if (result == null) result = casePetrinet_Place_RemoveToken_AbstractSubStep(petrinet_Place_RemoveToken_ImplicitStep);
-				if (result == null) result = caseSmallStep(petrinet_Place_RemoveToken_ImplicitStep);
-				if (result == null) result = caseSpecificStep(petrinet_Place_RemoveToken_ImplicitStep);
-				if (result == null) result = caseStep(petrinet_Place_RemoveToken_ImplicitStep);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case StepsPackage.PETRINET_TRANSITION_FIRE: {
 				Petrinet_Transition_Fire petrinet_Transition_Fire = (Petrinet_Transition_Fire)theEObject;
 				T result = casePetrinet_Transition_Fire(petrinet_Transition_Fire);
 				if (result == null) result = casePetrinet_Net_FireEnabledTransition_AbstractSubStep(petrinet_Transition_Fire);
+				if (result == null) result = casePetrinet_Net_Stop_AbstractSubStep(petrinet_Transition_Fire);
 				if (result == null) result = caseSequentialStep(petrinet_Transition_Fire);
+				if (result == null) result = casePetrinet_Transition_Fire_AbstractSubStep(petrinet_Transition_Fire);
+				if (result == null) result = casePetrinet_Net_InitializeModel_AbstractSubStep(petrinet_Transition_Fire);
 				if (result == null) result = caseSpecificStep(petrinet_Transition_Fire);
 				if (result == null) result = caseBigStep(petrinet_Transition_Fire);
 				if (result == null) result = caseStep(petrinet_Transition_Fire);
@@ -409,96 +342,6 @@ public class StepsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePetrinet_Net_Stop_ImplicitStep(Petrinet_Net_Stop_ImplicitStep object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Place Add Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Place Add Token</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePetrinet_Place_AddToken(Petrinet_Place_AddToken object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Place Add Token Abstract Sub Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Place Add Token Abstract Sub Step</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePetrinet_Place_AddToken_AbstractSubStep(Petrinet_Place_AddToken_AbstractSubStep object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Place Add Token Implicit Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Place Add Token Implicit Step</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePetrinet_Place_AddToken_ImplicitStep(Petrinet_Place_AddToken_ImplicitStep object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Place Remove Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Place Remove Token</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePetrinet_Place_RemoveToken(Petrinet_Place_RemoveToken object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Place Remove Token Abstract Sub Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Place Remove Token Abstract Sub Step</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePetrinet_Place_RemoveToken_AbstractSubStep(Petrinet_Place_RemoveToken_AbstractSubStep object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Petrinet Place Remove Token Implicit Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Petrinet Place Remove Token Implicit Step</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePetrinet_Place_RemoveToken_ImplicitStep(Petrinet_Place_RemoveToken_ImplicitStep object) {
 		return null;
 	}
 

@@ -31,8 +31,6 @@ import petrinetTrace.States.StatesPackage;
 import petrinetTrace.Steps.Petrinet_Net_InitializeModel_AbstractSubStep;
 import petrinetTrace.Steps.Petrinet_Net_Stop;
 import petrinetTrace.Steps.Petrinet_Net_Stop_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Place_AddToken_AbstractSubStep;
-import petrinetTrace.Steps.Petrinet_Place_RemoveToken_AbstractSubStep;
 import petrinetTrace.Steps.Petrinet_Transition_Fire_AbstractSubStep;
 import petrinetTrace.Steps.StepsPackage;
 
@@ -369,16 +367,6 @@ public class Petrinet_Net_StopImpl extends StepImpl implements Petrinet_Net_Stop
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Petrinet_Place_AddToken_AbstractSubStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Place_RemoveToken_AbstractSubStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == BigStep.class) {
 			switch (derivedFeatureID) {
 				case StepsPackage.PETRINET_NET_STOP__SUB_STEPS: return TracePackage.BIG_STEP__SUB_STEPS;
@@ -415,16 +403,6 @@ public class Petrinet_Net_StopImpl extends StepImpl implements Petrinet_Net_Stop
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Petrinet_Place_AddToken_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Petrinet_Place_RemoveToken_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == BigStep.class) {
 			switch (baseFeatureID) {
 				case TracePackage.BIG_STEP__SUB_STEPS: return StepsPackage.PETRINET_NET_STOP__SUB_STEPS;

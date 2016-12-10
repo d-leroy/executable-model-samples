@@ -3,8 +3,8 @@
 package fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl;
 
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Place;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.Transition;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,34 +16,34 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Place Remove Token Event</b></em>'.
+ * An implementation of the model object '<em><b>Transition Fire Event</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.PlaceRemoveTokenEventImpl#getPlace <em>Place</em>}</li>
+ *   <li>{@link fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.impl.TransitionFireEventImpl#getTransition <em>Transition</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemoveTokenEvent {
+public class TransitionFireEventImpl extends EObjectImpl implements TransitionFireEvent {
 	/**
-	 * The cached value of the '{@link #getPlace() <em>Place</em>}' reference.
+	 * The cached value of the '{@link #getTransition() <em>Transition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlace()
+	 * @see #getTransition()
 	 * @generated
 	 * @ordered
 	 */
-	protected Place place;
+	protected Transition transition;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PlaceRemoveTokenEventImpl() {
+	protected TransitionFireEventImpl() {
 		super();
 	}
 
@@ -54,7 +54,7 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PetrinetPackage.Literals.PLACE_REMOVE_TOKEN_EVENT;
+		return PetrinetPackage.Literals.TRANSITION_FIRE_EVENT;
 	}
 
 	/**
@@ -62,16 +62,16 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Place getPlace() {
-		if (place != null && place.eIsProxy()) {
-			InternalEObject oldPlace = (InternalEObject)place;
-			place = (Place)eResolveProxy(oldPlace);
-			if (place != oldPlace) {
+	public Transition getTransition() {
+		if (transition != null && transition.eIsProxy()) {
+			InternalEObject oldTransition = (InternalEObject)transition;
+			transition = (Transition)eResolveProxy(oldTransition);
+			if (transition != oldTransition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT__PLACE, oldPlace, place));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.TRANSITION_FIRE_EVENT__TRANSITION, oldTransition, transition));
 			}
 		}
-		return place;
+		return transition;
 	}
 
 	/**
@@ -79,8 +79,8 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Place basicGetPlace() {
-		return place;
+	public Transition basicGetTransition() {
+		return transition;
 	}
 
 	/**
@@ -88,11 +88,11 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPlace(Place newPlace) {
-		Place oldPlace = place;
-		place = newPlace;
+	public void setTransition(Transition newTransition) {
+		Transition oldTransition = transition;
+		transition = newTransition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT__PLACE, oldPlace, place));
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITION_FIRE_EVENT__TRANSITION, oldTransition, transition));
 	}
 
 	/**
@@ -103,9 +103,9 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT__PLACE:
-				if (resolve) return getPlace();
-				return basicGetPlace();
+			case PetrinetPackage.TRANSITION_FIRE_EVENT__TRANSITION:
+				if (resolve) return getTransition();
+				return basicGetTransition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,8 +118,8 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT__PLACE:
-				setPlace((Place)newValue);
+			case PetrinetPackage.TRANSITION_FIRE_EVENT__TRANSITION:
+				setTransition((Transition)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,8 +133,8 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT__PLACE:
-				setPlace((Place)null);
+			case PetrinetPackage.TRANSITION_FIRE_EVENT__TRANSITION:
+				setTransition((Transition)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,10 +148,10 @@ public class PlaceRemoveTokenEventImpl extends EObjectImpl implements PlaceRemov
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PetrinetPackage.PLACE_REMOVE_TOKEN_EVENT__PLACE:
-				return place != null;
+			case PetrinetPackage.TRANSITION_FIRE_EVENT__TRANSITION:
+				return transition != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //PlaceRemoveTokenEventImpl
+} //TransitionFireEventImpl

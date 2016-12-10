@@ -88,12 +88,8 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 				return createNetStopEventAdapter();
 			}
 			@Override
-			public Adapter casePlaceAddTokenEvent(PlaceAddTokenEvent object) {
-				return createPlaceAddTokenEventAdapter();
-			}
-			@Override
-			public Adapter casePlaceRemoveTokenEvent(PlaceRemoveTokenEvent object) {
-				return createPlaceRemoveTokenEventAdapter();
+			public Adapter caseTransitionFireEvent(TransitionFireEvent object) {
+				return createTransitionFireEventAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -186,30 +182,16 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceAddTokenEvent <em>Place Add Token Event</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.TransitionFireEvent <em>Transition Fire Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceAddTokenEvent
+	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.TransitionFireEvent
 	 * @generated
 	 */
-	public Adapter createPlaceAddTokenEventAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceRemoveTokenEvent <em>Place Remove Token Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.inria.diverse.sample.petrinet.petrinetmt.petrinet.PlaceRemoveTokenEvent
-	 * @generated
-	 */
-	public Adapter createPlaceRemoveTokenEventAdapter() {
+	public Adapter createTransitionFireEventAdapter() {
 		return null;
 	}
 

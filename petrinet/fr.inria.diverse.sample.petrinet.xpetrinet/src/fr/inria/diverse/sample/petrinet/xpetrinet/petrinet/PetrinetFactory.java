@@ -67,22 +67,13 @@ public interface PetrinetFactory extends EFactory {
 	NetStopEvent createNetStopEvent();
 
 	/**
-	 * Returns a new object of class '<em>Place Add Token Event</em>'.
+	 * Returns a new object of class '<em>Transition Fire Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Place Add Token Event</em>'.
+	 * @return a new object of class '<em>Transition Fire Event</em>'.
 	 * @generated
 	 */
-	PlaceAddTokenEvent createPlaceAddTokenEvent();
-
-	/**
-	 * Returns a new object of class '<em>Place Remove Token Event</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Place Remove Token Event</em>'.
-	 * @generated
-	 */
-	PlaceRemoveTokenEvent createPlaceRemoveTokenEvent();
+	TransitionFireEvent createTransitionFireEvent();
 
 	/**
 	 * Returns the package supported by this factory.

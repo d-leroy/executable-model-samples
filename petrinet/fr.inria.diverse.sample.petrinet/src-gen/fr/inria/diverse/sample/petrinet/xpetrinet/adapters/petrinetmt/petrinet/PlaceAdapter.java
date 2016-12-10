@@ -38,26 +38,6 @@ public class PlaceAdapter extends EObjectAdapter<Place> implements fr.inria.dive
   }
   
   @Override
-  public void addToken() {
-    fr.inria.diverse.sample.petrinet.xpetrinet.aspects.PlaceAspect.addToken(adaptee);
-  }
-  
-  @Override
-  public boolean addToken_PreCondition() {
-    return fr.inria.diverse.sample.petrinet.xpetrinet.aspects.PlaceAspect.addToken_PreCondition(adaptee);
-  }
-  
-  @Override
-  public void removeToken() {
-    fr.inria.diverse.sample.petrinet.xpetrinet.aspects.PlaceAspect.removeToken(adaptee);
-  }
-  
-  @Override
-  public boolean removeToken_PreCondition() {
-    return fr.inria.diverse.sample.petrinet.xpetrinet.aspects.PlaceAspect.removeToken_PreCondition(adaptee);
-  }
-  
-  @Override
   public EList<Token> getTokens() {
     return fr.inria.diverse.melange.adapters.EListAdapter.newInstance(fr.inria.diverse.sample.petrinet.xpetrinet.aspects.PlaceAspect.tokens(adaptee), adaptersFactory, eResource);
   }

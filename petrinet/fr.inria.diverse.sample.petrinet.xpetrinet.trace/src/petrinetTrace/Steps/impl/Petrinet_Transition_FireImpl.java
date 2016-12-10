@@ -28,6 +28,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import petrinetTrace.States.State;
 import petrinetTrace.States.StatesPackage;
 
+import petrinetTrace.Steps.Petrinet_Net_InitializeModel_AbstractSubStep;
+import petrinetTrace.Steps.Petrinet_Net_Stop_AbstractSubStep;
 import petrinetTrace.Steps.Petrinet_Transition_Fire;
 import petrinetTrace.Steps.Petrinet_Transition_Fire_AbstractSubStep;
 import petrinetTrace.Steps.StepsPackage;
@@ -365,6 +367,11 @@ public class Petrinet_Transition_FireImpl extends StepImpl implements Petrinet_T
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Petrinet_Net_Stop_AbstractSubStep.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == BigStep.class) {
 			switch (derivedFeatureID) {
 				case StepsPackage.PETRINET_TRANSITION_FIRE__SUB_STEPS: return TracePackage.BIG_STEP__SUB_STEPS;
@@ -372,6 +379,16 @@ public class Petrinet_Transition_FireImpl extends StepImpl implements Petrinet_T
 			}
 		}
 		if (baseClass == SequentialStep.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == Petrinet_Transition_Fire_AbstractSubStep.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == Petrinet_Net_InitializeModel_AbstractSubStep.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -386,6 +403,11 @@ public class Petrinet_Transition_FireImpl extends StepImpl implements Petrinet_T
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Petrinet_Net_Stop_AbstractSubStep.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == BigStep.class) {
 			switch (baseFeatureID) {
 				case TracePackage.BIG_STEP__SUB_STEPS: return StepsPackage.PETRINET_TRANSITION_FIRE__SUB_STEPS;
@@ -393,6 +415,16 @@ public class Petrinet_Transition_FireImpl extends StepImpl implements Petrinet_T
 			}
 		}
 		if (baseClass == SequentialStep.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == Petrinet_Transition_Fire_AbstractSubStep.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == Petrinet_Net_InitializeModel_AbstractSubStep.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}

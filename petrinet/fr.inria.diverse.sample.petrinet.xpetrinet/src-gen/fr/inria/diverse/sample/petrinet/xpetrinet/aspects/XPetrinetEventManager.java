@@ -8,9 +8,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PetrinetPackage;
+import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.TransitionFireEvent;
 import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.NetStopEvent;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceAddTokenEvent;
-import fr.inria.diverse.sample.petrinet.xpetrinet.petrinet.PlaceRemoveTokenEvent;
 import fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager;
 
 public class XPetrinetEventManager implements IEventManager {
@@ -28,14 +27,11 @@ public class XPetrinetEventManager implements IEventManager {
 	
 	@Override
 	public boolean canSendEvent(Object event) {
+		if (event instanceof TransitionFireEvent) {
+			return canSendTransitionFireEvent((TransitionFireEvent) event);
+		} else
 		if (event instanceof NetStopEvent) {
 			return true;
-		} else
-		if (event instanceof PlaceAddTokenEvent) {
-			return canSendPlaceAddTokenEvent((PlaceAddTokenEvent) event);
-		} else
-		if (event instanceof PlaceRemoveTokenEvent) {
-			return canSendPlaceRemoveTokenEvent((PlaceRemoveTokenEvent) event);
 		}
 		return false;
 	}
@@ -43,9 +39,8 @@ public class XPetrinetEventManager implements IEventManager {
 	@Override
 	public Set<EClass> getEventClasses() {
 		final Set<EClass> eventClasses = new HashSet<>();
+		eventClasses.add(PetrinetPackage.eINSTANCE.getTransitionFireEvent());
 		eventClasses.add(PetrinetPackage.eINSTANCE.getNetStopEvent());
-		eventClasses.add(PetrinetPackage.eINSTANCE.getPlaceAddTokenEvent());
-		eventClasses.add(PetrinetPackage.eINSTANCE.getPlaceRemoveTokenEvent());
 		return eventClasses;
 	}
 	
@@ -63,14 +58,17 @@ public class XPetrinetEventManager implements IEventManager {
 	}
 	
 	private void dispatchEvent(EObject event) {
+		if (event instanceof TransitionFireEvent) {
+			handleTransitionFireEvent((TransitionFireEvent) event);
+		} else
 		if (event instanceof NetStopEvent) {
 			handleNetStopEvent((NetStopEvent) event);
-		} else
-		if (event instanceof PlaceAddTokenEvent) {
-			handlePlaceAddTokenEvent((PlaceAddTokenEvent) event);
-		} else
-		if (event instanceof PlaceRemoveTokenEvent) {
-			handlePlaceRemoveTokenEvent((PlaceRemoveTokenEvent) event);
+		}
+	}
+	
+	private void handleTransitionFireEvent(TransitionFireEvent event) {
+		if (TransitionAspect.fire_PreCondition(event.getTransition())) {
+			TransitionAspect.fire(event.getTransition());
 		}
 	}
 	
@@ -78,23 +76,7 @@ public class XPetrinetEventManager implements IEventManager {
 		NetAspect.stop(event.getNet());
 	}
 	
-	private void handlePlaceAddTokenEvent(PlaceAddTokenEvent event) {
-		if (PlaceAspect.addToken_PreCondition(event.getPlace())) {
-			PlaceAspect.addToken(event.getPlace());
-		}
-	}
-	
-	private void handlePlaceRemoveTokenEvent(PlaceRemoveTokenEvent event) {
-		if (PlaceAspect.removeToken_PreCondition(event.getPlace())) {
-			PlaceAspect.removeToken(event.getPlace());
-		}
-	}
-	
-	private boolean canSendPlaceAddTokenEvent(PlaceAddTokenEvent event) {
-		return PlaceAspect.addToken_PreCondition(event.getPlace());
-	}
-	
-	private boolean canSendPlaceRemoveTokenEvent(PlaceRemoveTokenEvent event) {
-		return PlaceAspect.removeToken_PreCondition(event.getPlace());
+	private boolean canSendTransitionFireEvent(TransitionFireEvent event) {
+		return TransitionAspect.fire_PreCondition(event.getTransition());
 	}
 }

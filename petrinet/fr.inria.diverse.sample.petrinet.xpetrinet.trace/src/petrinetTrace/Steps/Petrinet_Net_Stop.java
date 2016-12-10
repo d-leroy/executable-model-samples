@@ -16,7 +16,7 @@ import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
  * @model
  * @generated
  */
-public interface Petrinet_Net_Stop extends Petrinet_Net_FireEnabledTransition_AbstractSubStep, Petrinet_Place_AddToken_AbstractSubStep, Petrinet_Place_RemoveToken_AbstractSubStep, SpecificStep, SequentialStep<Petrinet_Net_Stop_AbstractSubStep>, Petrinet_Net_Stop_AbstractSubStep, Petrinet_Transition_Fire_AbstractSubStep, Petrinet_Net_InitializeModel_AbstractSubStep {
+public interface Petrinet_Net_Stop extends Petrinet_Net_FireEnabledTransition_AbstractSubStep, SpecificStep, SequentialStep<Petrinet_Net_Stop_AbstractSubStep>, Petrinet_Net_Stop_AbstractSubStep, Petrinet_Transition_Fire_AbstractSubStep, Petrinet_Net_InitializeModel_AbstractSubStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
